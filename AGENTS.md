@@ -39,22 +39,23 @@ Deduplicate by event + date + action. The same announcement often arrives three 
 
 If a browser is available, also check https://portal.tokyois.com/ (user `parent` / password `inspire`). Skip the honeypot field (`um_request`). HTTP login without a browser is acceptable: Ultimate Member fields `username-38` / `user_password-38`. If Gmail MCP is missing, say so.
 
-**Gmail MCP is preferred when it is actually registered.** In Cursor Desktop, use Gmail `send_message`. Cloud Sunday automations often have no `gmail` server even after Google Mail is connected on the automation.
-
-**Cloud send fallback (Gmail API):** if `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, and `GMAIL_REFRESH_TOKEN` are set as Cursor secrets, search and send with `scripts/gmail_briefing.py`. Do not invent a third mail path. Do not send markdown.
+**Preferred cloud send: Resend** (`RESEND_API_KEY`). Skip Google OAuth. Search still uses Gmail MCP/API when available; otherwise portal + memory fill the template.
 
 ```
-python3 scripts/gmail_briefing.py search
-python3 scripts/gmail_briefing.py send \
+python3 scripts/resend_briefing.py send \
   --to kotolynski@gmail.com \
   --subject "TIS Week · 24–30 Aug 2026" \
   --html email/weekly-briefing.html \
   --body "<3–5 sentence plain-text fallback>"
 ```
 
-The script rewrites avatar `src` to `cid:` in the MIME payload only. Leave the on-disk template using relative `assets/` paths.
+Optional `RESEND_FROM` (default `TIS Week <beth.t@example.com>`). After verifying a domain: `TIS Week <briefing@insightworks.se>`.
 
-If neither Gmail MCP nor those three secrets are available, **do not send**. Report the failure in the run log. One-time token creation: `python3 scripts/gmail_oauth_setup.py` (local browser).
+**Gmail MCP** still preferred in Cursor Desktop. **Gmail API** (`scripts/gmail_briefing.py`) remains a second fallback if the three Gmail secrets exist.
+
+The scripts rewrite avatar `src` to `cid:` in the payload only. Leave the on-disk template using relative `assets/` paths.
+
+If none of Gmail MCP, `RESEND_API_KEY`, or the Gmail API secrets are available, **do not send**.
 
 ## Fill the template
 
@@ -69,7 +70,7 @@ Overwrite `email/weekly-briefing.html` with this week's data.
 
 ## Send the email (required on Sunday / when asked to send)
 
-Prefer Gmail MCP `send_message` when that server is listed. Otherwise use `scripts/gmail_briefing.py send` with the Cloud secrets. Never send a markdown or chat recap as the email.
+Prefer Gmail MCP `send_message` when that server is listed. Otherwise use `scripts/resend_briefing.py send` when `RESEND_API_KEY` is set. Otherwise `scripts/gmail_briefing.py send`. Never send a markdown or chat recap as the email.
 
 | Field | Value |
 |---|---|

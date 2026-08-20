@@ -8,7 +8,7 @@ The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 
 
 **Decision:** follow AGENTS.md literally — do not send a markdown or plain-text briefing. Leave the HTML on disk.
 
-**Follow-up (same day):** Fredrik confirmed he had already connected Google Mail on the automation and signed in. Re-login is not the fix. **Decision:** add `scripts/gmail_briefing.py` (Gmail REST + refresh token) as the cloud send path, with a local `gmail_oauth_setup.py` to mint `GMAIL_REFRESH_TOKEN`. Secrets stay in Cursor Cloud, never in git. Desktop `/tis-week` via Gmail MCP remains valid.
+**Follow-up (same day):** Fredrik confirmed he had already connected Google Mail on the automation and signed in. Re-login is not the fix. Gmail OAuth Playground was painful (`redirect_uri_mismatch`). **Decision:** preferred cloud send is Resend (`scripts/resend_briefing.py` + `RESEND_API_KEY`). Gmail API scripts remain optional. Desktop `/tis-week` via Gmail MCP remains valid. Resend does not search the inbox; portal + memory fill the briefing.
 
 **Also confirmed from portal-linked docs this run:** no car drop-off at Takanawa; Times Parking P2 with a 30-minute office ticket; Opening Ceremony is standing-room, QR confirmation on the phone.
 
