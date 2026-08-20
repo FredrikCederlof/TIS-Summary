@@ -4,7 +4,7 @@ Next steps. Move done items to decisions.md or delete them.
 
 ## Open
 
-- [ ] **Sunday cloud send is blocked by Cursor, not by missing login** — Fredrik already connected Gmail on the automation. The VM still has no `gmail` MCP server (plugin synced as static files only). Until Cursor attaches Google OAuth to cloud automations, send from **Cursor Desktop** with `/tis-week`. Optional later: Gmail API via Cloud secrets, bypassing MCP.
+- [ ] **Add Gmail API Cloud secrets** — `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, `GMAIL_REFRESH_TOKEN`. Mint the token locally with `python3 scripts/gmail_oauth_setup.py`. Until those secrets exist, Sunday cloud runs still cannot send (script is in the repo; MCP still missing).
 - [ ] **Decide whether the email replaces `TIS-Summary-print.html`** — `email/weekly-briefing.html` now covers the same content and also prints cleanly. The old print sheet uses CSS Grid/Flexbox and is not email-safe. Delete it once confirmed.
 - [ ] **Confirm Eldor's and Malte's class placements** — Toddle opens Fri 21 Aug. Run `/tis-week` after that date to capture placements in the next canvas.
 - [ ] **Verify bus situation** — Bus requests were removed from re-enrolment (March 2026). Confirm if bus is still needed for any child.
@@ -27,3 +27,4 @@ Next steps. Move done items to decisions.md or delete them.
 - [x] Skill + AGENTS.md require sending the filled HTML via Gmail `htmlBody` (20 Aug 2026)
 - [x] `email/` + `AGENTS.md` are on origin/main (Sunday cloud clone had the template)
 - [x] Sunday automation prompt now names the HTML template (20 Aug 2026) — send still blocked until Gmail MCP attaches in cloud
+- [x] Gmail API fallback scripts (`scripts/gmail_briefing.py`, `gmail_oauth_setup.py`) (20 Aug 2026)

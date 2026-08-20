@@ -39,9 +39,22 @@ Deduplicate by event + date + action. The same announcement often arrives three 
 
 If a browser is available, also check https://portal.tokyois.com/ (user `parent` / password `inspire`). Skip the honeypot field (`um_request`). HTTP login without a browser is acceptable: Ultimate Member fields `username-38` / `user_password-38`. If Gmail MCP is missing, say so.
 
-**Gmail MCP is required to send.** Cloud automations have seen the Gmail plugin files on disk without a registered `gmail` server (`MCP server does not exist: gmail`), even when Fredrik already connected Google Mail on the automation and signed in. That is a Cursor cloud/OAuth gap, not a missing click. Do not invent another mail path and do not send markdown.
+**Gmail MCP is preferred when it is actually registered.** In Cursor Desktop, use Gmail `send_message`. Cloud Sunday automations often have no `gmail` server even after Google Mail is connected on the automation.
 
-**Working send path today:** in Cursor Desktop (where Gmail MCP is actually connected), run `/tis-week` so `send_message` can use `htmlBody`. This cloud VM cannot pick up Gmail after the run has started.
+**Cloud send fallback (Gmail API):** if `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, and `GMAIL_REFRESH_TOKEN` are set as Cursor secrets, search and send with `scripts/gmail_briefing.py`. Do not invent a third mail path. Do not send markdown.
+
+```
+python3 scripts/gmail_briefing.py search
+python3 scripts/gmail_briefing.py send \
+  --to kotolynski@gmail.com \
+  --subject "TIS Week · 24–30 Aug 2026" \
+  --html email/weekly-briefing.html \
+  --body "<3–5 sentence plain-text fallback>"
+```
+
+The script rewrites avatar `src` to `cid:` in the MIME payload only. Leave the on-disk template using relative `assets/` paths.
+
+If neither Gmail MCP nor those three secrets are available, **do not send**. Report the failure in the run log. One-time token creation: `python3 scripts/gmail_oauth_setup.py` (local browser).
 
 ## Fill the template
 
@@ -56,7 +69,7 @@ Overwrite `email/weekly-briefing.html` with this week's data.
 
 ## Send the email (required on Sunday / when asked to send)
 
-Use Gmail `send_message` (not the agent's chat reply, not a markdown body):
+Prefer Gmail MCP `send_message` when that server is listed. Otherwise use `scripts/gmail_briefing.py send` with the Cloud secrets. Never send a markdown or chat recap as the email.
 
 | Field | Value |
 |---|---|

@@ -8,7 +8,7 @@ The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 
 
 **Decision:** follow AGENTS.md literally — do not send a markdown or plain-text briefing. Leave the HTML on disk.
 
-**Follow-up (same day):** Fredrik confirmed he had already connected Google Mail on the automation and signed in. Re-login is not the fix. The plugin lands with `enabledCapabilities: ["static"]` only — files, not an authenticated MCP session. Cursor’s own docs/forum: Desktop OAuth does not carry to cloud; Google plugins have a separate Auth 2.0 issue. Working send path: `/tis-week` in Cursor Desktop. This cloud VM cannot gain Gmail mid-run.
+**Follow-up (same day):** Fredrik confirmed he had already connected Google Mail on the automation and signed in. Re-login is not the fix. **Decision:** add `scripts/gmail_briefing.py` (Gmail REST + refresh token) as the cloud send path, with a local `gmail_oauth_setup.py` to mint `GMAIL_REFRESH_TOKEN`. Secrets stay in Cursor Cloud, never in git. Desktop `/tis-week` via Gmail MCP remains valid.
 
 **Also confirmed from portal-linked docs this run:** no car drop-off at Takanawa; Times Parking P2 with a 30-minute office ticket; Opening Ceremony is standing-room, QR confirmation on the phone.
 

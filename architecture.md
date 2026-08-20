@@ -12,12 +12,15 @@ How the system is built.
 ├── decisions.md                  # Decision log
 ├── todo.md                       # Next steps
 ├── TIS-Summary-print.html        # Legacy print/PDF sheet (superseded by email/)
-└── email/
-    ├── weekly-briefing.html      # HTML email briefing — MD3, table-based, text-first
-    └── assets/                   # Per-child avatars (the email's only images)
-        ├── avatar-eldor.png      # 128px, circular mask + white ring baked in
-        ├── avatar-malte.png
-        └── avatar-vega-lo.png
+├── email/
+│   ├── weekly-briefing.html      # HTML email briefing — MD3, table-based, text-first
+│   └── assets/                   # Per-child avatars (the email's only images)
+│       ├── avatar-eldor.png      # 128px, circular mask + white ring baked in
+│       ├── avatar-malte.png
+│       └── avatar-vega-lo.png
+└── scripts/
+    ├── gmail_briefing.py         # Gmail API search + HTML send (cloud fallback)
+    └── gmail_oauth_setup.py      # One-time local refresh-token helper
 
 ~/.cursor/skills/tis-weekly-briefing/
 └── SKILL.md                      # Agent instructions (primary entry point)
@@ -32,19 +35,19 @@ How the system is built.
 ## Data flow (each run)
 
 1. Agent reads `memory.md` and `AGENTS.md`.
-2. Agent searches Gmail via Gmail MCP (multiple queries, see AGENTS.md / SKILL.md).
+2. Agent searches Gmail via Gmail MCP when registered; otherwise `python3 scripts/gmail_briefing.py search` using Cloud secrets.
 3. Agent logs into portal.tokyois.com when a browser is available; otherwise Gmail-only.
 4. Agent deduplicates 3-child mail, extracts events + actions for the coming week.
 5. Agent overwrites `email/weekly-briefing.html` with this week's data (same MD3 table layout).
 6. Agent overwrites `TIS-Summary.canvas.tsx` when a canvas workspace is available.
-7. On Sunday (or when asked to send): Gmail `send_message` with `htmlBody` = the filled HTML, plus inline avatar attachments. A short chat recap is the run log, not the email.
+7. On Sunday (or when asked to send): Gmail MCP `send_message` if available, else `scripts/gmail_briefing.py send`. `htmlBody` is the filled HTML plus inline avatar CIDs. A short chat recap is the run log, not the email.
 
 ## Trigger paths
 
 | How | What happens |
 |---|---|
 | `/tis-week` in chat | Runs the skill on demand |
-| Sunday automation | Cloud agent clones this repo, fills the HTML template, sends it via Gmail MCP |
+| Sunday automation | Cloud agent clones this repo, fills the HTML template, sends via Gmail MCP **or** `scripts/gmail_briefing.py` |
 
 The Sunday prompt must say **fill and send `email/weekly-briefing.html`**. If it only says "send a summary", the agent emails its chat recap as plain text — that is what happened on 20 Aug 2026.
 
@@ -52,11 +55,29 @@ The Sunday prompt must say **fill and send `email/weekly-briefing.html`**. If it
 
 | MCP | Used for | Status |
 |---|---|---|
-| `gmail` (Cursor Gmail plugin → `https://gmailmcp.googleapis.com/mcp/v1`) | Search school mail + `send_message` with HTML | **Desktop chat: works.** Cloud Sunday automation: plugin files sync (`enabledCapabilities: ["static"]`) but **no `gmail` MCP server is registered** — `GetMcpTools` does not list it, even after Fredrik connected Google Mail on the automation and signed in. Cursor Cloud treats Google OAuth as a separate, currently broken path; the automation “connected” state does not inject tokens into the VM. Working send path until Cursor fixes this: `/tis-week` in Cursor Desktop. |
+| `gmail` (Cursor Gmail plugin) | Search + send | **Desktop chat: works.** Cloud Sunday automation: plugin files sync as static; no `gmail` MCP server is registered. |
+| Gmail API (`scripts/gmail_briefing.py`) | Search + send when MCP is missing | Needs secrets `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, `GMAIL_REFRESH_TOKEN`. Create the token once with `scripts/gmail_oauth_setup.py`. |
 | `cursor-ide-browser` | portal.tokyois.com login + scraping | Desktop only. Cloud runs: Gmail-only is the contract; portal can still be fetched with HTTP login (skip honeypot `um_request`). |
 | `cursor-app-control` | Open Automations editor | Desktop only |
 
-If Gmail MCP is missing, **do not send**. Report the failure in the run log. Never substitute a markdown recap.
+If Gmail MCP is missing and the three Gmail API secrets are unset, **do not send**. Never substitute a markdown recap.
+
+## Gmail API secrets (cloud send)
+
+One-time, on Fredrik’s laptop (needs a browser):
+
+1. [Google Cloud Console](https://console.cloud.google.com/) → project → enable **Gmail API**.
+2. OAuth consent screen (External) → add `kotolynski@gmail.com` as a test user.
+3. Credentials → Create OAuth client ID → **Desktop app**. Copy client id and secret.
+4. `python3 scripts/gmail_oauth_setup.py --client-id … --client-secret …`
+5. Paste the three printed values as Cursor Cloud / environment secrets (not into git):
+   - `GMAIL_CLIENT_ID`
+   - `GMAIL_CLIENT_SECRET`
+   - `GMAIL_REFRESH_TOKEN`
+
+Redirect URI used by the helper: `http://127.0.0.1:8765/oauth2callback`. Add it on the OAuth client if Google asks.
+
+Scopes: `gmail.readonly` and `gmail.send`. The next Sunday run can then search and send without Gmail MCP.
 
 ## Output artifacts
 
