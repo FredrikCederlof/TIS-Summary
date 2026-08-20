@@ -5,3 +5,5 @@ gmail-oauth.env
 token.json
 credentials.json
 client_secret*.json
+__pycache__/
+*.pyc
