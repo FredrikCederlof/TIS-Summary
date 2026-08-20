@@ -52,9 +52,11 @@ The Sunday prompt must say **fill and send `email/weekly-briefing.html`**. If it
 
 | MCP | Used for | Status |
 |---|---|---|
-| `gmail` (plugin-gmail-gmail) | Search + read school mail | Connected |
-| `cursor-ide-browser` | portal.tokyois.com login + scraping | Connected (shared session) |
-| `cursor-app-control` | Open Automations editor | Connected |
+| `gmail` (Cursor Gmail plugin → `https://gmailmcp.googleapis.com/mcp/v1`) | Search school mail + `send_message` with HTML | **Desktop: connected. Cloud Sunday automation: not registered.** Plugin files land in `~/.cursor/plugins/cache`, but `GetMcpTools` does not expose a `gmail` server (OAuth does not attach). 20 Aug 2026 run failed send for this reason. |
+| `cursor-ide-browser` | portal.tokyois.com login + scraping | Desktop only. Cloud runs: Gmail-only is the contract; portal can still be fetched with HTTP login (skip honeypot `um_request`). |
+| `cursor-app-control` | Open Automations editor | Desktop only |
+
+If Gmail MCP is missing, **do not send**. Report the failure in the run log. Never substitute a markdown recap.
 
 ## Output artifacts
 

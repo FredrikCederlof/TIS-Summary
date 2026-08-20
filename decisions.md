@@ -2,6 +2,16 @@
 
 Log of choices made and why.
 
+## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
+
+The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.
+
+**Decision:** follow AGENTS.md literally — do not send a markdown or plain-text briefing. Leave the HTML on disk. Ask Fredrik to authenticate Gmail for cloud/automation runs, then re-run.
+
+**Also confirmed from portal-linked docs this run:** no car drop-off at Takanawa; Times Parking P2 with a 30-minute office ticket; Opening Ceremony is standing-room, QR confirmation on the phone.
+
+---
+
 ## 2026-08-20 — Sunday email must be the HTML template
 
 The first Sunday automation emailed a markdown recap ("Do this first" bullets) because (1) the prompt said "send a summary" without naming the template, (2) `SKILL.md` told the agent not to send email and to write a chat recap, and (3) `email/weekly-briefing.html` was not on `origin/main`, so a cloud clone had nothing to fill. Fix: `AGENTS.md` in the repo is the send contract; the skill now requires Gmail `htmlBody` = the filled template; the Sunday prompt must say so explicitly.

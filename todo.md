@@ -4,9 +4,8 @@ Next steps. Move done items to decisions.md or delete them.
 
 ## Open
 
+- [ ] **Authenticate Gmail MCP for cloud automations** — blocking. The 20 Aug 2026 Sunday cloud run had the Gmail plugin on disk but no `gmail` MCP server (`MCP server does not exist: gmail`). Without `send_message`, the agent cannot mail `weekly-briefing.html`. Re-auth Gmail on the automation at https://cursor.com/automations/1f1985ea-9c82-11f1-ba66-0e7d0216e441 and re-run. Do not send a markdown fallback.
 - [ ] **Decide whether the email replaces `TIS-Summary-print.html`** — `email/weekly-briefing.html` now covers the same content and also prints cleanly. The old print sheet uses CSS Grid/Flexbox and is not email-safe. Delete it once confirmed.
-- [ ] **Commit and push `email/` + `AGENTS.md` to origin** — the Sunday cloud agent clones `insight-works/TIS-Summary`. Until these files are on `main`, it cannot fill the template.
-- [ ] **Replace the Sunday automation** — current prompt produced a plain-text recap. New one must fill `email/weekly-briefing.html` and send it as Gmail `htmlBody`. Cron `0 10 * * 0` (UTC = 19:00 JST). Delete or disable the old automation after the replacement is saved.
 - [ ] **Confirm Eldor's and Malte's class placements** — Toddle opens Fri 21 Aug. Run `/tis-week` after that date to capture placements in the next canvas.
 - [ ] **Verify bus situation** — Bus requests were removed from re-enrolment (March 2026). Confirm if bus is still needed for any child.
 - [ ] **Kiwi Kitchen account** — Create account before Tue 25 Aug if using school lunch. Mention grade + A or B for first order.
@@ -26,3 +25,5 @@ Next steps. Move done items to decisions.md or delete them.
 - [x] UX review checklist applied across all eight sections (20 Aug 2026)
 - [x] Per-child avatars added, replacing the letter monograms
 - [x] Skill + AGENTS.md require sending the filled HTML via Gmail `htmlBody` (20 Aug 2026)
+- [x] `email/` + `AGENTS.md` are on origin/main (Sunday cloud clone had the template)
+- [x] Sunday automation prompt now names the HTML template (20 Aug 2026) — send still blocked until Gmail MCP attaches in cloud

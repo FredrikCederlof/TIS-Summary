@@ -37,7 +37,9 @@ from:seesaw newer_than:14d
 
 Deduplicate by event + date + action. The same announcement often arrives three times (once per child). Show it once.
 
-If a browser is available, also check https://portal.tokyois.com/ (user `parent` / password `inspire`). Skip the honeypot field. If no browser, Gmail-only is acceptable — say so.
+If a browser is available, also check https://portal.tokyois.com/ (user `parent` / password `inspire`). Skip the honeypot field (`um_request`). HTTP login without a browser is acceptable: Ultimate Member fields `username-38` / `user_password-38`. If Gmail MCP is missing, say so.
+
+**Gmail MCP is required to send.** Cloud automations have seen the Gmail plugin files on disk without a registered `gmail` server (`MCP server does not exist: gmail`). That is a send-blocker, not a reason to invent another mail path.
 
 ## Fill the template
 
