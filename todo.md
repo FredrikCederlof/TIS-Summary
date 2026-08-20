@@ -4,7 +4,7 @@ Next steps. Move done items to decisions.md or delete them.
 
 ## Open
 
-- [ ] **Authenticate Gmail MCP for cloud automations** — blocking. The 20 Aug 2026 Sunday cloud run had the Gmail plugin on disk but no `gmail` MCP server (`MCP server does not exist: gmail`). Without `send_message`, the agent cannot mail `weekly-briefing.html`. Re-auth Gmail on the automation at https://cursor.com/automations/1f1985ea-9c82-11f1-ba66-0e7d0216e441 and re-run. Do not send a markdown fallback.
+- [ ] **Sunday cloud send is blocked by Cursor, not by missing login** — Fredrik already connected Gmail on the automation. The VM still has no `gmail` MCP server (plugin synced as static files only). Until Cursor attaches Google OAuth to cloud automations, send from **Cursor Desktop** with `/tis-week`. Optional later: Gmail API via Cloud secrets, bypassing MCP.
 - [ ] **Decide whether the email replaces `TIS-Summary-print.html`** — `email/weekly-briefing.html` now covers the same content and also prints cleanly. The old print sheet uses CSS Grid/Flexbox and is not email-safe. Delete it once confirmed.
 - [ ] **Confirm Eldor's and Malte's class placements** — Toddle opens Fri 21 Aug. Run `/tis-week` after that date to capture placements in the next canvas.
 - [ ] **Verify bus situation** — Bus requests were removed from re-enrolment (March 2026). Confirm if bus is still needed for any child.

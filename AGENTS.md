@@ -39,7 +39,9 @@ Deduplicate by event + date + action. The same announcement often arrives three 
 
 If a browser is available, also check https://portal.tokyois.com/ (user `parent` / password `inspire`). Skip the honeypot field (`um_request`). HTTP login without a browser is acceptable: Ultimate Member fields `username-38` / `user_password-38`. If Gmail MCP is missing, say so.
 
-**Gmail MCP is required to send.** Cloud automations have seen the Gmail plugin files on disk without a registered `gmail` server (`MCP server does not exist: gmail`). That is a send-blocker, not a reason to invent another mail path.
+**Gmail MCP is required to send.** Cloud automations have seen the Gmail plugin files on disk without a registered `gmail` server (`MCP server does not exist: gmail`), even when Fredrik already connected Google Mail on the automation and signed in. That is a Cursor cloud/OAuth gap, not a missing click. Do not invent another mail path and do not send markdown.
+
+**Working send path today:** in Cursor Desktop (where Gmail MCP is actually connected), run `/tis-week` so `send_message` can use `htmlBody`. This cloud VM cannot pick up Gmail after the run has started.
 
 ## Fill the template
 

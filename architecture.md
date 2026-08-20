@@ -52,7 +52,7 @@ The Sunday prompt must say **fill and send `email/weekly-briefing.html`**. If it
 
 | MCP | Used for | Status |
 |---|---|---|
-| `gmail` (Cursor Gmail plugin → `https://gmailmcp.googleapis.com/mcp/v1`) | Search school mail + `send_message` with HTML | **Desktop: connected. Cloud Sunday automation: not registered.** Plugin files land in `~/.cursor/plugins/cache`, but `GetMcpTools` does not expose a `gmail` server (OAuth does not attach). 20 Aug 2026 run failed send for this reason. |
+| `gmail` (Cursor Gmail plugin → `https://gmailmcp.googleapis.com/mcp/v1`) | Search school mail + `send_message` with HTML | **Desktop chat: works.** Cloud Sunday automation: plugin files sync (`enabledCapabilities: ["static"]`) but **no `gmail` MCP server is registered** — `GetMcpTools` does not list it, even after Fredrik connected Google Mail on the automation and signed in. Cursor Cloud treats Google OAuth as a separate, currently broken path; the automation “connected” state does not inject tokens into the VM. Working send path until Cursor fixes this: `/tis-week` in Cursor Desktop. |
 | `cursor-ide-browser` | portal.tokyois.com login + scraping | Desktop only. Cloud runs: Gmail-only is the contract; portal can still be fetched with HTTP login (skip honeypot `um_request`). |
 | `cursor-app-control` | Open Automations editor | Desktop only |
 

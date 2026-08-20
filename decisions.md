@@ -6,7 +6,9 @@ Log of choices made and why.
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.
 
-**Decision:** follow AGENTS.md literally — do not send a markdown or plain-text briefing. Leave the HTML on disk. Ask Fredrik to authenticate Gmail for cloud/automation runs, then re-run.
+**Decision:** follow AGENTS.md literally — do not send a markdown or plain-text briefing. Leave the HTML on disk.
+
+**Follow-up (same day):** Fredrik confirmed he had already connected Google Mail on the automation and signed in. Re-login is not the fix. The plugin lands with `enabledCapabilities: ["static"]` only — files, not an authenticated MCP session. Cursor’s own docs/forum: Desktop OAuth does not carry to cloud; Google plugins have a separate Auth 2.0 issue. Working send path: `/tis-week` in Cursor Desktop. This cloud VM cannot gain Gmail mid-run.
 
 **Also confirmed from portal-linked docs this run:** no car drop-off at Takanawa; Times Parking P2 with a 30-minute office ticket; Opening Ceremony is standing-room, QR confirmation on the phone.
 
