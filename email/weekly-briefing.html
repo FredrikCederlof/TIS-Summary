@@ -1,0 +1,1428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="x-apple-disable-message-reformatting" />
+<meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no" />
+<meta name="color-scheme" content="light" />
+<meta name="supported-color-schemes" content="light" />
+<title>TIS Week &middot; 24&ndash;30 Aug 2026</title>
+
+<!--[if mso]>
+<noscript><xml><o:OfficeDocumentSettings>
+  <o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings></xml></noscript>
+<![endif]-->
+
+<!--
+  ════════════════════════════════════════════════════════════════════════════
+  TIS WEEKLY PARENT BRIEFING — HTML EMAIL
+  ════════════════════════════════════════════════════════════════════════════
+
+  Material Design 3 tonal design system. Table-based layout for maximum
+  client compatibility (Gmail, Apple Mail, Outlook, iOS, Android).
+
+  ── DESIGN TOKENS — M3 baseline tonal roles ────────────────────────────────
+  Role              Base       Container   On-container
+  Primary           #6750A4    #E9DDFF     #22005D
+  Secondary         #4F5B92    #DDE1FF     #001551
+  Tertiary          #7D5260    #FFD8E4     #31111D
+  Error             #B3261E    #F9DEDC     #410E0B
+  Success           #2E6B4F    #D7EFDF     #06210F
+  Warning           #7A5900    #FFDF9A     #261A00
+  Info              #00629E    #CFE5FF     #001D33
+
+  Surface                 #FFFBFF
+  Surface container low   #F7F2FA
+  Surface container       #F1ECF4
+  Surface container high  #ECE6F0
+  Outline variant         #CAC4D0
+  On surface              #1D1B20
+  On surface variant      #49454F
+
+  Colour is a secondary cue only. Hierarchy is carried by type size and
+  weight first — see the type scale below.
+
+  ── TYPE SCALE ─────────────────────────────────────────────────────────────
+  Display        40/1.15  w800  -0.02em   (30px mobile)
+  Section title  26/1.25  w700  -0.01em   (22px mobile)
+  Card title     17/1.35  w700
+  Body           16/1.5   w400
+  Body small     14/1.55  w400
+  Caption        13/1.5   w400
+  Overline       11/1.0   w700  +0.12em  uppercase
+
+  ── SPACING — 8dp system ───────────────────────────────────────────────────
+  8 / 16 / 24 / 32 / 40 / 48. Card padding is 24px throughout.
+  Section gap is 48px. No arbitrary values.
+
+  ── SHAPE ──────────────────────────────────────────────────────────────────
+  Large cards 20px · medium 16px · small 12px · chips fully rounded.
+
+  ── CLIENT NOTES ───────────────────────────────────────────────────────────
+  * border-radius and box-shadow are ignored by Outlook (Word engine).
+    Cards degrade to square with a visible border — intentional, acceptable.
+  * Media queries are ignored by Outlook desktop; the 640px layout is the
+    fallback and renders correctly there.
+  * Images: the ONLY images are the three per-child avatars in assets/.
+    Everything else is live HTML text, so the email still reads correctly
+    when a client blocks remote images. Keep it that way.
+      - The circular shape and the white ring are baked into each PNG, with
+        transparent corners. They therefore render as circles even in
+        Outlook, which ignores border-radius. The border-radius in the
+        markup is belt-and-braces for clients that do honour it.
+      - Assets are 128px for a 64px display box (2x for retina).
+      - src is currently RELATIVE for local preview. BEFORE SENDING, rewrite
+        each src to an ABSOLUTE https:// URL, or attach the images as CID
+        parts. Relative paths resolve to nothing in a mail client.
+      - Every image carries real alt text (the child's name), so a blocked
+        image degrades to the name rather than a blank box.
+  * No JavaScript. Anything requiring expand/collapse, hover or ripple is a
+    web-version concern only; in email those degrade to plain links.
+  ════════════════════════════════════════════════════════════════════════════
+-->
+
+<style type="text/css">
+  /* ── Client resets ── */
+  html, body { margin:0 !important; padding:0 !important; height:100% !important; width:100% !important; }
+  * { -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; }
+  table, td { mso-table-lspace:0pt !important; mso-table-rspace:0pt !important; border-collapse:collapse !important; }
+  img { -ms-interpolation-mode:bicubic; border:0; height:auto; line-height:100%; outline:none; text-decoration:none; display:block; }
+  a { text-decoration:none; }
+  p { margin:0; }
+
+  /* Outlook.com / Office 365 */
+  .ExternalClass { width:100%; }
+  .ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass div { line-height:inherit; }
+
+  /* iOS auto-link colour neutralisation */
+  a[x-apple-data-detectors] {
+    color:inherit !important; text-decoration:none !important;
+    font-size:inherit !important; font-family:inherit !important; font-weight:inherit !important;
+  }
+
+  /* ── Responsive ── */
+  @media only screen and (max-width:620px) {
+    .container      { width:100% !important; max-width:100% !important; }
+    /* box-sizing is required: these cells carry the card padding and border. */
+    .stack          { display:block !important; width:100% !important; max-width:100% !important; box-sizing:border-box !important; }
+    .stack-gap      { display:block !important; width:100% !important; height:16px !important; font-size:0 !important; line-height:0 !important; }
+    .px             { padding-left:20px !important; padding-right:20px !important; }
+    .display        { font-size:30px !important; line-height:1.18 !important; }
+    .section-title  { font-size:22px !important; }
+    .hero-pad       { padding-top:40px !important; padding-bottom:40px !important; }
+    .hide-sm        { display:none !important; mso-hide:all; }
+    /* box-sizing keeps horizontal padding inside the 100% width. */
+    .btn-sm         { display:block !important; width:100% !important; text-align:center !important; box-sizing:border-box !important; }
+    /* Chip rows stack. Two white-space:nowrap chips side by side otherwise
+       force a ~385px minimum width, which overflows a 320px screen. The
+       child selector is deliberate: it must hit the layout cell, never the
+       nested cell that draws the pill itself. */
+    .chips > tbody > tr > td { display:block !important; padding:0 0 8px 0 !important; }
+  }
+</style>
+</head>
+
+<body style="margin:0; padding:0; width:100%; background-color:#F1ECF4;">
+
+<!-- ══ PREHEADER — inbox preview text, hidden in body ══════════════════════ -->
+<div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#F1ECF4; opacity:0;">
+  Emergency contact due Sun 23 Aug &middot; Opening Day Mon 24 Aug &middot; First day of school Tue 25 Aug
+  &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+</div>
+
+<!-- ══ OUTER WRAPPER ══════════════════════════════════════════════════════ -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F1ECF4;">
+<tr>
+<td align="center" style="padding:0;">
+
+  <!--[if mso]><table role="presentation" width="640" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+  <table role="presentation" class="container" width="640" cellpadding="0" cellspacing="0" border="0" style="width:640px; max-width:640px; margin:0 auto;">
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       1. HERO
+       ══════════════════════════════════════════════════════════════════ -->
+  <tr>
+  <td style="background-color:#E9DDFF; border-radius:0 0 32px 32px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td class="px hero-pad" style="padding:48px 32px 48px 32px;">
+
+      <!-- Mark -->
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="48" height="48" align="center" valign="middle"
+            style="width:48px; height:48px; background-color:#6750A4; border-radius:16px;
+                   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                   font-size:20px; line-height:1; color:#FFFFFF; font-weight:800;">TIS</td>
+      </tr>
+      </table>
+
+      <!-- Greeting -->
+      <div style="margin-top:32px;
+           font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+           font-size:16px; line-height:1.5; font-weight:600; color:#22005D;">
+        Hi Fredrik &#128075;
+      </div>
+
+      <!-- Display title -->
+      <div class="display" style="margin-top:8px;
+           font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+           font-size:40px; line-height:1.15; font-weight:800; letter-spacing:-0.02em; color:#1D1B20;">
+        Your school week<br />24&ndash;30 Aug
+      </div>
+
+      <!-- Accent rule -->
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;">
+      <tr><td width="64" height="5" style="width:64px; height:5px; background-color:#6750A4; border-radius:3px; font-size:0; line-height:0;">&nbsp;</td></tr>
+      </table>
+
+      <!-- Standfirst — constrained measure for readability (~56 characters) -->
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;">
+      <tr><td style="max-width:460px;
+             font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:16px; line-height:1.5; font-weight:600; color:#1D1B20;">
+        Weekly parent briefing for Eldor (G6&nbsp;MYP), Malte (G3&nbsp;PYP) and Vega&#8209;Lo (KG,&nbsp;new).
+      </td></tr>
+      </table>
+
+      <!-- ── Summary of the week ──────────────────────────────────────── -->
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+             style="margin-top:24px; background-color:#FFFBFF; border-radius:16px;">
+      <tr><td style="padding:24px;">
+        <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#6750A4;">
+          The week in short
+        </div>
+        <div style="margin-top:12px; max-width:460px;
+             font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:16px; line-height:1.5; color:#49454F;">
+          This is the first week on the new Takanawa Gateway City campus.
+          <strong style="color:#1D1B20;">One hard deadline:</strong> the emergency contact form must be
+          submitted before Sunday 23 August. Opening Day is Monday 24 August, with separate orientations
+          for Lower School (Malte, Vega&#8209;Lo) and Upper School (Eldor), and the first full school day
+          is Tuesday 25 August. CCA rankings open today at 15:00 and close Tuesday at 15:00, so rank them
+          before the weekend.
+        </div>
+      </td></tr>
+      </table>
+
+      <!-- ── Metadata chips ───────────────────────────────────────────── -->
+      <table role="presentation" class="chips" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;">
+      <tr>
+        <td style="padding:0 8px 8px 0;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#FFFBFF; border-radius:8px; padding:6px 12px;
+                     font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                     font-size:12px; font-weight:600; color:#49454F; white-space:nowrap;">Week 24&ndash;30 Aug</td>
+          </tr></table>
+        </td>
+        <td style="padding:0 8px 8px 0;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#FFFBFF; border-radius:8px; padding:6px 12px;
+                     font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                     font-size:12px; font-weight:600; color:#49454F; white-space:nowrap;">Takanawa Gateway City</td>
+          </tr></table>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:0 8px 0 0;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#FFFBFF; border-radius:8px; padding:6px 12px;
+                     font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                     font-size:12px; font-weight:600; color:#49454F; white-space:nowrap;">Updated Thu 20 Aug</td>
+          </tr></table>
+        </td>
+        <td style="padding:0 8px 0 0;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#FFFBFF; border-radius:8px; padding:6px 12px;
+                     font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                     font-size:12px; font-weight:600; color:#49454F; white-space:nowrap;">5 min read</td>
+          </tr></table>
+        </td>
+      </tr>
+      </table>
+
+      <!-- ── Primary CTA ──────────────────────────────────────────────── -->
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:32px;">
+      <tr>
+        <td align="center" style="background-color:#6750A4; border-radius:100px;">
+          <a href="https://portal.tokyois.com/" class="btn-sm"
+             style="display:inline-block; padding:16px 32px;
+                    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                    font-size:16px; font-weight:700; color:#FFFFFF; text-decoration:none;">
+            Open Parent Portal
+          </a>
+        </td>
+      </tr>
+      </table>
+
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       2. URGENT ACTIONS
+       Split into "Requires action" (deadline-sorted) and "For information".
+       ══════════════════════════════════════════════════════════════════ -->
+  <tr>
+  <td class="px" style="padding:48px 32px 0 32px;">
+
+    <!-- Section heading -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td width="56" valign="middle" style="width:56px; padding-right:16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr><td width="40" height="40" align="center" valign="middle"
+                style="width:40px; height:40px; background-color:#F9DEDC; border-radius:12px;
+                       font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                       font-size:22px; line-height:1; font-weight:800; color:#B3261E;">!</td></tr>
+        </table>
+      </td>
+      <td valign="middle">
+        <div class="section-title" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:26px; line-height:1.25; font-weight:700; letter-spacing:-0.01em; color:#1D1B20;">
+          Urgent actions
+        </div>
+        <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:14px; line-height:1.55; color:#49454F;">
+          5 need action &middot; earliest deadline first
+        </div>
+      </td>
+    </tr>
+    </table>
+
+    <!-- ── Group label: requires action ─────────────────────────────── -->
+    <div style="margin-top:32px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+         font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#B3261E;">
+      Requires action
+    </div>
+
+    <!--
+      ACTION 1 — Emergency contact. Critical, and also the earliest deadline,
+      so it leads the list on both sort keys.
+    -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+           style="margin-top:16px; background-color:#F9DEDC; border-radius:20px;">
+    <tr><td style="padding:24px;">
+
+      <!-- Chips row -->
+      <table role="presentation" class="chips" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td style="padding-right:8px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#B3261E; border-radius:100px; padding:5px 12px;
+                     font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                     font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#FFFFFF; white-space:nowrap;">Critical</td>
+          </tr></table>
+        </td>
+        <td>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#FFFFFF; border-radius:100px; padding:5px 12px;
+                     font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                     font-size:11px; font-weight:700; color:#410E0B; white-space:nowrap;">Sun 23 Aug &middot; in 3 days</td>
+          </tr></table>
+        </td>
+      </tr>
+      </table>
+
+      <div style="margin-top:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+           font-size:20px; line-height:1.3; font-weight:700; color:#410E0B;">
+        Register an emergency contact
+      </div>
+
+      <!-- Bulleted, not prose -->
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:12px;">
+      <tr>
+        <td width="16" valign="top" style="width:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#B3261E;">&bull;</td>
+        <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#410E0B;">One adult based in Japan who is <strong>not a parent</strong></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" style="width:16px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#B3261E;">&bull;</td>
+        <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#410E0B;">OpenApply &rarr; Checklist &rarr; Consent &amp; Agreement Form</td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" style="width:16px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#B3261E;">&bull;</td>
+        <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#410E0B;">One entry covers all three children</td>
+      </tr>
+      </table>
+
+      <!-- Full-width high-emphasis CTA -->
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;">
+      <tr>
+        <td align="center" style="background-color:#B3261E; border-radius:100px;">
+          <a href="https://tokyois.openapply.com/"
+             style="display:block; padding:16px 24px; text-align:center;
+                    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                    font-size:16px; font-weight:700; color:#FFFFFF; text-decoration:none;">
+            Complete the form in OpenApply
+          </a>
+        </td>
+      </tr>
+      </table>
+
+      <div style="margin-top:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+           font-size:13px; line-height:1.5; color:#49454F;">
+        Flagged outstanding by Nana Imamura, 20 Aug.
+      </div>
+
+    </td></tr>
+    </table>
+
+    <!-- ACTION 2 — Opening Ceremony, Mon 24 Aug -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+           style="margin-top:16px; background-color:#FFFBFF; border-radius:20px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="56" valign="top" style="width:56px; padding-right:16px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#E9DDFF; border-radius:100px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:20px; line-height:1; color:#6750A4;">&#9733;</td></tr>
+          </table>
+        </td>
+        <td valign="top">
+          <table role="presentation" class="chips" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
+          <tr>
+            <td style="padding-right:8px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+              <td style="background-color:#F1ECF4; border-radius:100px; padding:5px 12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#49454F; white-space:nowrap;">Medium</td>
+              </tr></table>
+            </td>
+            <td>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+              <td style="background-color:#E9DDFF; border-radius:100px; padding:5px 12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; color:#22005D; white-space:nowrap;">Mon 24 Aug &middot; in 4 days</td>
+              </tr></table>
+            </td>
+          </tr>
+          </table>
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; line-height:1.35; font-weight:700; color:#1D1B20;">Prepare for Opening Day</div>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:12px;">
+          <tr><td width="16" valign="top" style="width:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#6750A4;">&bull;</td>
+              <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Have the invitation on your phone</td></tr>
+          <tr><td width="16" valign="top" style="width:16px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#6750A4;">&bull;</td>
+              <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Taxi drop-off on Route&nbsp;15, not at the campus entrance</td></tr>
+          <tr><td width="16" valign="top" style="width:16px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#6750A4;">&bull;</td>
+              <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">No high heels on the gym floor</td></tr>
+          </table>
+        </td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- ACTION 3 — CCA rankings close Tue 25 Aug 15:00 -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+           style="margin-top:16px; background-color:#FFFBFF; border-radius:20px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="56" valign="top" style="width:56px; padding-right:16px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#FFDF9A; border-radius:100px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:20px; line-height:1; color:#7A5900;">&#9873;</td></tr>
+          </table>
+        </td>
+        <td valign="top">
+          <table role="presentation" class="chips" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
+          <tr>
+            <td style="padding-right:8px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+              <td style="background-color:#7A5900; border-radius:100px; padding:5px 12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#FFFFFF; white-space:nowrap;">High</td>
+              </tr></table>
+            </td>
+            <td>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+              <td style="background-color:#FFDF9A; border-radius:100px; padding:5px 12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; color:#261A00; white-space:nowrap;">Closes Tue 25 Aug 15:00</td>
+              </tr></table>
+            </td>
+          </tr>
+          </table>
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; line-height:1.35; font-weight:700; color:#1D1B20;">Rank CCA choices in SchoolsBuddy</div>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:12px;">
+          <tr><td width="16" valign="top" style="width:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#7A5900;">&bull;</td>
+              <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Sign-up <strong style="color:#1D1B20;">opens today at 15:00</strong></td></tr>
+          <tr><td width="16" valign="top" style="width:16px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#7A5900;">&bull;</td>
+              <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Preference-based, not first-come-first-served</td></tr>
+          <tr><td width="16" valign="top" style="width:16px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#7A5900;">&bull;</td>
+              <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Activities start Mon 31 Aug</td></tr>
+          </table>
+        </td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- ACTION 4 — First-day kit, Tue 25 Aug -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+           style="margin-top:16px; background-color:#FFFBFF; border-radius:20px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="56" valign="top" style="width:56px; padding-right:16px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#D7EFDF; border-radius:100px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:20px; line-height:1; color:#2E6B4F;">&#10003;</td></tr>
+          </table>
+        </td>
+        <td valign="top">
+          <table role="presentation" class="chips" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
+          <tr>
+            <td style="padding-right:8px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+              <td style="background-color:#2E6B4F; border-radius:100px; padding:5px 12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#FFFFFF; white-space:nowrap;">High</td>
+              </tr></table>
+            </td>
+            <td>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+              <td style="background-color:#D7EFDF; border-radius:100px; padding:5px 12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; color:#06210F; white-space:nowrap;">Tue 25 Aug &middot; in 5 days</td>
+              </tr></table>
+            </td>
+          </tr>
+          </table>
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; line-height:1.35; font-weight:700; color:#1D1B20;">Pack the first-day kit</div>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:12px;">
+          <tr><td width="16" valign="top" style="width:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#2E6B4F;">&bull;</td>
+              <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;"><strong style="color:#1D1B20;">Vega-Lo &amp; Malte:</strong> backpack, water bottle, own cutlery, nut-free lunch</td></tr>
+          <tr><td width="16" valign="top" style="width:16px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#2E6B4F;">&bull;</td>
+              <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;"><strong style="color:#1D1B20;">Eldor:</strong> school tote only, charged Mac, TI-84 if confirmed</td></tr>
+          </table>
+        </td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- ACTION 5 — Hopes & Dreams, Fri 28 Aug -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+           style="margin-top:16px; background-color:#FFFBFF; border-radius:20px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="56" valign="top" style="width:56px; padding-right:16px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#FFD8E4; border-radius:100px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:20px; line-height:1; color:#7D5260;">&#9679;</td></tr>
+          </table>
+        </td>
+        <td valign="top">
+          <table role="presentation" class="chips" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
+          <tr>
+            <td style="padding-right:8px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+              <td style="background-color:#F1ECF4; border-radius:100px; padding:5px 12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#49454F; white-space:nowrap;">Medium</td>
+              </tr></table>
+            </td>
+            <td>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+              <td style="background-color:#FFD8E4; border-radius:100px; padding:5px 12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; color:#31111D; white-space:nowrap;">Fri 28 Aug &middot; in 8 days</td>
+              </tr></table>
+            </td>
+          </tr>
+          </table>
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; line-height:1.35; font-weight:700; color:#1D1B20;">Book your Hopes &amp; Dreams slot</div>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:12px;">
+          <tr><td width="16" valign="top" style="width:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#7D5260;">&bull;</td>
+              <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Watch for the homeroom letter with your time slot</td></tr>
+          <tr><td width="16" valign="top" style="width:16px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#7D5260;">&bull;</td>
+              <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">New ID badges are handed out at this event</td></tr>
+          </table>
+        </td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- ── Group label: FYI ─────────────────────────────────────────── -->
+    <div style="margin-top:32px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+         font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">
+      For information &middot; no fixed deadline
+    </div>
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+           style="margin-top:16px; background-color:#F7F2FA; border-radius:20px;">
+    <tr><td style="padding:24px;">
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="40" valign="top" style="width:40px; padding-right:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:20px; line-height:1.3; color:#00629E;">&#9679;</td>
+        <td valign="top">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; line-height:1.35; font-weight:700; color:#1D1B20;">Class placements go live Fri 21 Aug</div>
+          <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">
+            Check each child&rsquo;s class in <a href="https://web.toddleapp.com/" style="color:#00629E; font-weight:600;">Toddle</a>.
+            Login problems &rarr; <a href="mailto:jench@tokyois.com" style="color:#00629E; font-weight:600;">jench@tokyois.com</a>.
+          </div>
+        </td>
+      </tr>
+      </table>
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;">
+      <tr><td height="1" style="height:1px; background-color:#CAC4D0; font-size:0; line-height:0;">&nbsp;</td></tr>
+      </table>
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;">
+      <tr>
+        <td width="40" valign="top" style="width:40px; padding-right:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:20px; line-height:1.3; color:#6750A4;">&#9670;</td>
+        <td valign="top">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; line-height:1.35; font-weight:700; color:#1D1B20;">OpenApply checklist still open</div>
+          <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">
+            Medical and contact forms, passport-style photos for ID lanyards, Japanese placement survey,
+            bus survey, and the unaccompanied-leave form for KG&ndash;G2.
+          </div>
+        </td>
+      </tr>
+      </table>
+
+      <div style="margin-top:24px;">
+        <a href="https://tokyois.openapply.com/" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:15px; font-weight:700; color:#6750A4;">View all tasks in OpenApply &rarr;</a>
+      </div>
+
+    </td></tr>
+    </table>
+
+  </td>
+  </tr>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       3. THIS WEEK'S HIGHLIGHTS
+       Set on a tinted band so it reads as a distinct layer from the
+       timeline below, which is white cards on the page background.
+       ══════════════════════════════════════════════════════════════════ -->
+  <tr>
+  <td class="px" style="padding:48px 32px 0 32px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#DDE1FF; border-radius:24px;">
+    <tr><td style="padding:32px 24px;">
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="56" valign="middle" style="width:56px; padding-right:16px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#4F5B92; border-radius:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:20px; line-height:1; color:#FFFFFF;">&#9733;</td></tr>
+          </table>
+        </td>
+        <td valign="middle">
+          <div class="section-title" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:26px; line-height:1.25; font-weight:700; letter-spacing:-0.01em; color:#001551;">
+            Highlights
+          </div>
+          <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.55; color:#001551;">
+            The four moments that matter most
+          </div>
+        </td>
+      </tr>
+      </table>
+
+      <!-- Row 1 -->
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;">
+      <tr>
+        <td class="stack" width="48%" valign="top" style="width:48%; background-color:#FFFBFF; border-radius:16px; padding:24px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr><td width="48" height="48" align="center" valign="middle" style="width:48px; height:48px; background-color:#F9DEDC; border-radius:100px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:24px; line-height:1; font-weight:800; color:#B3261E;">!</td></tr>
+          </table>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;"><tr>
+          <td style="background-color:#F9DEDC; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#410E0B;">Reminder</td>
+          </tr></table>
+          <div style="margin-top:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; line-height:1.35; font-weight:700; color:#1D1B20;">Emergency contact due Sunday</div>
+          <div style="margin-top:16px;"><a href="https://tokyois.openapply.com/" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:700; color:#B3261E;">Complete now &rarr;</a></div>
+        </td>
+
+        <td class="stack-gap" width="4%" style="width:4%; font-size:0; line-height:0;">&nbsp;</td>
+
+        <td class="stack" width="48%" valign="top" style="width:48%; background-color:#FFFBFF; border-radius:16px; padding:24px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr><td width="48" height="48" align="center" valign="middle" style="width:48px; height:48px; background-color:#E9DDFF; border-radius:100px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:24px; line-height:1; color:#6750A4;">&#9733;</td></tr>
+          </table>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;"><tr>
+          <td style="background-color:#E9DDFF; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#22005D;">New</td>
+          </tr></table>
+          <div style="margin-top:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; line-height:1.35; font-weight:700; color:#1D1B20;">Opening Day Mon 24, doors 08:30</div>
+          <div style="margin-top:16px;"><a href="https://calendar.google.com/calendar/embed?src=parents.calendar%40tokyois.com&amp;ctz=Asia%2FTokyo" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:700; color:#6750A4;">See schedule &rarr;</a></div>
+        </td>
+      </tr>
+      </table>
+
+      <!-- Row 2 -->
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;">
+      <tr>
+        <td class="stack" width="48%" valign="top" style="width:48%; background-color:#FFFBFF; border-radius:16px; padding:24px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr><td width="48" height="48" align="center" valign="middle" style="width:48px; height:48px; background-color:#D7EFDF; border-radius:100px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:24px; line-height:1; font-weight:800; color:#2E6B4F;">&#10003;</td></tr>
+          </table>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;"><tr>
+          <td style="background-color:#D7EFDF; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#06210F;">New</td>
+          </tr></table>
+          <div style="margin-top:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; line-height:1.35; font-weight:700; color:#1D1B20;">School starts Tue 25 Aug</div>
+          <div style="margin-top:16px;"><a href="https://web.toddleapp.com/" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:700; color:#2E6B4F;">Check placements &rarr;</a></div>
+        </td>
+
+        <td class="stack-gap" width="4%" style="width:4%; font-size:0; line-height:0;">&nbsp;</td>
+
+        <td class="stack" width="48%" valign="top" style="width:48%; background-color:#FFFBFF; border-radius:16px; padding:24px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr><td width="48" height="48" align="center" valign="middle" style="width:48px; height:48px; background-color:#FFD8E4; border-radius:100px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:24px; line-height:1; color:#7D5260;">&#9670;</td></tr>
+          </table>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;"><tr>
+          <td style="background-color:#FFD8E4; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#31111D;">Social</td>
+          </tr></table>
+          <div style="margin-top:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; line-height:1.35; font-weight:700; color:#1D1B20;">Back to School Bash Thu 27</div>
+          <div style="margin-top:16px;"><a href="https://calendar.google.com/calendar/embed?src=parents.calendar%40tokyois.com&amp;ctz=Asia%2FTokyo" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:700; color:#7D5260;">Add to plans &rarr;</a></div>
+        </td>
+      </tr>
+      </table>
+
+    </td></tr>
+    </table>
+  </td>
+  </tr>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       4. WEEK TIMELINE
+       Date is the dominant element; description is secondary and short.
+       ══════════════════════════════════════════════════════════════════ -->
+  <tr>
+  <td class="px" style="padding:48px 32px 0 32px;">
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td width="56" valign="middle" style="width:56px; padding-right:16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#CFE5FF; border-radius:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:18px; line-height:1; color:#00629E;">&#9656;</td></tr>
+        </table>
+      </td>
+      <td valign="middle">
+        <div class="section-title" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:26px; line-height:1.25; font-weight:700; letter-spacing:-0.01em; color:#1D1B20;">
+          Week timeline
+        </div>
+        <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.55; color:#49454F;">
+          Thu 20 Aug &ndash; Mon 31 Aug
+        </div>
+      </td>
+    </tr>
+    </table>
+
+    <!-- TODAY — accent container -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px; background-color:#E9DDFF; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="44" valign="top" style="width:44px; padding-right:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.2; color:#6750A4;">&#9873;</td>
+        <td valign="top">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.25; font-weight:800; color:#22005D;">Today &middot; Thu 20 Aug</div>
+          <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#22005D;">CCA sign-up opens 15:00</div>
+        </td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- Fri 21 -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#FFFBFF; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="44" valign="top" style="width:44px; padding-right:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.2; color:#00629E;">&#9679;</td>
+        <td valign="top">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.25; font-weight:800; color:#1D1B20;">Fri 21 Aug</div>
+          <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Toddle opens &mdash; class placements visible</div>
+        </td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- Sun 23 — deadline -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#F9DEDC; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="44" valign="top" style="width:44px; padding-right:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.2; font-weight:800; color:#B3261E;">!</td>
+        <td valign="top">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.25; font-weight:800; color:#410E0B;">Sun 23 Aug</div>
+          <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#410E0B;">Emergency contact deadline, 23:59</div>
+        </td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- Mon 24 — opening day, grouped morning / afternoon -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#FFFBFF; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="44" valign="top" style="width:44px; padding-right:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.2; color:#6750A4;">&#9733;</td>
+        <td valign="top">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.25; font-weight:800; color:#1D1B20;">Mon 24 Aug</div>
+          <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Opening Day at Takanawa Gateway City</div>
+        </td>
+      </tr>
+      </table>
+
+      <!-- Morning -->
+      <div style="margin-top:24px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#6750A4;">Morning</div>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:12px;">
+      <tr>
+        <td width="112" valign="top" style="width:112px; padding-bottom:12px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#F1ECF4; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:12px; font-weight:700; color:#49454F; white-space:nowrap;">08:30</td>
+          </tr></table>
+        </td>
+        <td valign="top" style="padding-bottom:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Doors open. No drop-offs on the approach road.</td>
+      </tr>
+      <tr>
+        <td width="112" valign="top" style="width:112px; padding-bottom:12px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#F1ECF4; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:12px; font-weight:700; color:#49454F; white-space:nowrap;">09:00</td>
+          </tr></table>
+        </td>
+        <td valign="top" style="padding-bottom:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Ribbon-tying ceremony. Optional. Lower School parents stay with their child.</td>
+      </tr>
+      <tr>
+        <td width="112" valign="top" style="width:112px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#F1ECF4; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:12px; font-weight:700; color:#49454F; white-space:nowrap;">10:00</td>
+          </tr></table>
+        </td>
+        <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Campus exploration. Photo wall in the lobby.</td>
+      </tr>
+      </table>
+
+      <!-- Afternoon -->
+      <div style="margin-top:24px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#6750A4;">Afternoon</div>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:12px;">
+      <tr>
+        <td width="112" valign="top" style="width:112px; padding-bottom:12px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#D7EFDF; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:12px; font-weight:700; color:#06210F; white-space:nowrap;">13:00</td>
+          </tr></table>
+        </td>
+        <td valign="top" style="padding-bottom:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;"><strong style="color:#1D1B20;">Lower School orientation</strong> &mdash; Malte, Vega-Lo</td>
+      </tr>
+      <tr>
+        <td width="112" valign="top" style="width:112px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#CFE5FF; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:12px; font-weight:700; color:#001D33; white-space:nowrap;">14:30</td>
+          </tr></table>
+        </td>
+        <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;"><strong style="color:#1D1B20;">Upper School orientation</strong> &mdash; Eldor</td>
+      </tr>
+      </table>
+
+      <div style="margin-top:24px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:13px; line-height:1.5; color:#49454F;">
+        No on-campus parking. <a href="https://times-info.net/P13-tokyo/C103/park-detail-BUK0076477/" style="color:#00629E; font-weight:600;">Nearby parking (P2)</a>.
+      </div>
+
+    </td></tr>
+    </table>
+
+    <!-- Tue 25 — first day -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#D7EFDF; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="44" valign="top" style="width:44px; padding-right:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.2; font-weight:800; color:#2E6B4F;">&#10003;</td>
+        <td valign="top">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.25; font-weight:800; color:#06210F;">Tue 25 Aug</div>
+          <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#06210F;">First day of school. Beyond the Bell starts. CCA closes 15:00.</div>
+        </td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- Thu 27 -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#FFFBFF; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="44" valign="top" style="width:44px; padding-right:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.2; color:#7D5260;">&#9670;</td>
+        <td valign="top">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.25; font-weight:800; color:#1D1B20;">Thu 27 Aug</div>
+          <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">TFC Back to School Bash, 15:30&ndash;18:00</div>
+        </td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- Fri 28 -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#FFFBFF; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="44" valign="top" style="width:44px; padding-right:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.2; color:#00629E;">&#9679;</td>
+        <td valign="top">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.25; font-weight:800; color:#1D1B20;">Fri 28 Aug</div>
+          <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Hopes &amp; Dreams conference. New ID badges issued.</div>
+        </td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- Mon 31 -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#F7F2FA; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="44" valign="top" style="width:44px; padding-right:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.2; color:#6E6875;">&#9679;</td>
+        <td valign="top">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:22px; line-height:1.25; font-weight:800; color:#49454F;">Mon 31 Aug</div>
+          <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">CCA Season 1 activities begin</div>
+        </td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+  </td>
+  </tr>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       5. PER CHILD
+       Each card leads with the action, then Academic / Logistics / Reminders.
+       ══════════════════════════════════════════════════════════════════ -->
+  <tr>
+  <td class="px" style="padding:48px 32px 0 32px;">
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td width="56" valign="middle" style="width:56px; padding-right:16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#FFD8E4; border-radius:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:18px; line-height:1; color:#7D5260;">&#9679;</td></tr>
+        </table>
+      </td>
+      <td valign="middle">
+        <div class="section-title" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:26px; line-height:1.25; font-weight:700; letter-spacing:-0.01em; color:#1D1B20;">
+          Per child
+        </div>
+        <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.55; color:#49454F;">
+          Only what differs between the three
+        </div>
+      </td>
+    </tr>
+    </table>
+
+    <!-- ── ELDOR ────────────────────────────────────────────────────── -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px; background-color:#FFFBFF; border-radius:20px;">
+    <tr><td style="padding:0;">
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr><td style="background-color:#CFE5FF; padding:24px; border-radius:20px 20px 0 0;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="80" valign="middle" style="width:80px; padding-right:16px;">
+            <img src="assets/avatar-eldor.png" width="64" height="64" alt="Eldor"
+                 style="width:64px; height:64px; display:block; border-radius:100px;" />
+          </td>
+          <td valign="middle">
+            <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:24px; line-height:1.2; font-weight:800; color:#001D33;">Eldor</div>
+            <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:600; color:#001D33;">Grade 6 &middot; MYP &middot; Returning</div>
+          </td>
+        </tr>
+        </table>
+      </td></tr>
+
+      <tr><td style="padding:24px;">
+
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F7F2FA; border-radius:12px;">
+        <tr><td style="padding:16px;">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#00629E;">Your action</div>
+          <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#1D1B20;">
+            Attend Upper School orientation &mdash; <strong>Mon 24 Aug 14:30&ndash;15:30</strong>
+          </div>
+        </td></tr>
+        </table>
+
+        <div style="margin-top:24px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">Academic</div>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:8px;">
+        <tr><td width="32" valign="top" style="width:32px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#00629E;">&#9679;</td>
+            <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">EAL-monitored &mdash; in-class support only, no extra lessons<br /><span style="font-size:14px;">Confirmed by <a href="mailto:tomomimi@tokyois.com" style="color:#00629E; font-weight:600;">Tomomi Mizuno</a>, EAL, Jun 2026</span></td></tr>
+        <tr><td width="32" valign="top" style="width:32px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#00629E;">&#9679;</td>
+            <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Back to School Night <strong style="color:#1D1B20;">Thu 10 Sep</strong></td></tr>
+        </table>
+
+        <div style="margin-top:24px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">Logistics</div>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:8px;">
+        <tr><td width="32" valign="top" style="width:32px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#00629E;">&#9679;</td>
+            <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">School-provided tote only on campus &mdash; no other bag</td></tr>
+        <tr><td width="32" valign="top" style="width:32px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#00629E;">&#9679;</td>
+            <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Charged Mac, water bottle, own cutlery</td></tr>
+        </table>
+
+      </td></tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- ── MALTE ────────────────────────────────────────────────────── -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#FFFBFF; border-radius:20px;">
+    <tr><td style="padding:0;">
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr><td style="background-color:#D7EFDF; padding:24px; border-radius:20px 20px 0 0;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="80" valign="middle" style="width:80px; padding-right:16px;">
+            <img src="assets/avatar-malte.png" width="64" height="64" alt="Malte"
+                 style="width:64px; height:64px; display:block; border-radius:100px;" />
+          </td>
+          <td valign="middle">
+            <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:24px; line-height:1.2; font-weight:800; color:#06210F;">Malte</div>
+            <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:600; color:#06210F;">Grade 3 &middot; PYP &middot; Returning</div>
+          </td>
+        </tr>
+        </table>
+      </td></tr>
+
+      <tr><td style="padding:24px;">
+
+        <!-- Action first -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F7F2FA; border-radius:12px;">
+        <tr><td style="padding:16px;">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#2E6B4F;">Your action</div>
+          <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#1D1B20;">
+            Attend Lower School orientation &mdash; <strong>Mon 24 Aug 13:00&ndash;14:00</strong>
+          </div>
+        </td></tr>
+        </table>
+
+        <!-- Academic -->
+        <div style="margin-top:24px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">Academic</div>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:8px;">
+        <tr><td width="32" valign="top" style="width:32px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#2E6B4F;">&#9679;</td>
+            <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Back to School Night <strong style="color:#1D1B20;">Wed 3 Sep</strong></td></tr>
+        </table>
+
+        <!-- Logistics -->
+        <div style="margin-top:24px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">Logistics</div>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:8px;">
+        <tr><td width="32" valign="top" style="width:32px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#2E6B4F;">&#9679;</td>
+            <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">First day kit: backpack, water bottle, own cutlery</td></tr>
+        <tr><td width="32" valign="top" style="width:32px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#2E6B4F;">&#9679;</td>
+            <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Beyond the Bell to 18:00 &mdash; <a href="mailto:operations@tokyois.com" style="color:#00629E; font-weight:600;">operations@tokyois.com</a></td></tr>
+        </table>
+
+        <!-- Reminders -->
+        <div style="margin-top:24px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">Reminders</div>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:8px;">
+        <tr><td width="32" valign="top" style="width:32px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#2E6B4F;">&#9679;</td>
+            <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Nut-free lunch, or order via Kiwi Kitchen</td></tr>
+        </table>
+
+      </td></tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- ── VEGA-LO ──────────────────────────────────────────────────── -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#FFFBFF; border-radius:20px;">
+    <tr><td style="padding:0;">
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr><td style="background-color:#FFD8E4; padding:24px; border-radius:20px 20px 0 0;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="80" valign="middle" style="width:80px; padding-right:16px;">
+            <img src="assets/avatar-vega-lo.png" width="64" height="64" alt="Vega-Lo"
+                 style="width:64px; height:64px; display:block; border-radius:100px;" />
+          </td>
+          <td valign="middle">
+            <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:24px; line-height:1.2; font-weight:800; color:#31111D;">Vega-Lo</div>
+            <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:600; color:#31111D;">Kindergarten &middot; New 2026/27</div>
+          </td>
+        </tr>
+        </table>
+      </td></tr>
+
+      <tr><td style="padding:24px;">
+
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F9DEDC; border-radius:12px;">
+        <tr><td style="padding:16px;">
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#B3261E;">Your action &middot; 3 open items</div>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:8px;">
+          <tr><td width="20" valign="top" style="width:20px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#B3261E;">&bull;</td>
+              <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#410E0B;">Unaccompanied-leave form (KG&ndash;G2) in OpenApply</td></tr>
+          <tr><td width="20" valign="top" style="width:20px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#B3261E;">&bull;</td>
+              <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#410E0B;">Photo upload &mdash; Vega-Lo and yourself</td></tr>
+          <tr><td width="20" valign="top" style="width:20px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#B3261E;">&bull;</td>
+              <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#410E0B;">Japanese placement survey and bus survey</td></tr>
+          </table>
+        </td></tr>
+        </table>
+
+        <div style="margin-top:24px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">Logistics</div>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:8px;">
+        <tr><td width="32" valign="top" style="width:32px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#7D5260;">&#9679;</td>
+            <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Lower School orientation <strong style="color:#1D1B20;">Mon 24 Aug 13:00&ndash;14:00</strong></td></tr>
+        <tr><td width="32" valign="top" style="width:32px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#7D5260;">&#9679;</td>
+            <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">First day kit: any backpack, water bottle, own cutlery</td></tr>
+        <tr><td width="32" valign="top" style="width:32px; padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#7D5260;">&#9679;</td>
+            <td valign="top" style="padding-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Beyond the Bell available from Tue 25 Aug</td></tr>
+        </table>
+
+        <div style="margin-top:24px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">Reminders</div>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:8px;">
+        <tr><td width="32" valign="top" style="width:32px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#7D5260;">&#9679;</td>
+            <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">You must stay with her at the Opening Ceremony</td></tr>
+        </table>
+
+      </td></tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- Shared daily life -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;">
+    <tr>
+      <td class="stack" width="48%" valign="top" style="width:48%; background-color:#F7F2FA; border-radius:16px; padding:24px;">
+        <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">From Tue 25 Aug</div>
+        <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; font-weight:700; color:#1D1B20;">Hours &amp; arrival</div>
+        <div style="margin-top:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">
+          Doors <strong style="color:#1D1B20;">08:00</strong>, homeroom <strong style="color:#1D1B20;">08:10</strong>, dismissal <strong style="color:#1D1B20;">15:20</strong>.<br /><br />
+          Off campus by 15:30. Bicycle parking 06:00&ndash;21:00.
+        </div>
+      </td>
+
+      <td class="stack-gap" width="4%" style="width:4%; font-size:0; line-height:0;">&nbsp;</td>
+
+      <td class="stack" width="48%" valign="top" style="width:48%; background-color:#F7F2FA; border-radius:16px; padding:24px;">
+        <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">Nut-free campus</div>
+        <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; font-weight:700; color:#1D1B20;">Food</div>
+        <div style="margin-top:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">
+          Bring own nut-free food, or order via <a href="https://docs.google.com/presentation/d/1_xHs35mN006-ctsU0JbFyiJlKNNlIv6oonGJNjaSIug/edit?usp=sharing" style="color:#00629E; font-weight:600;">Kiwi Kitchen</a>.<br /><br />
+          Mention grade + A or B on the first order.
+        </div>
+      </td>
+    </tr>
+    </table>
+
+  </td>
+  </tr>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       6. UPCOMING EVENTS
+       Cards with category colour, countdown chip and Add to Calendar.
+       ══════════════════════════════════════════════════════════════════ -->
+  <tr>
+  <td class="px" style="padding:48px 32px 0 32px;">
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td width="56" valign="middle" style="width:56px; padding-right:16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#E9DDFF; border-radius:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:18px; line-height:1; color:#6750A4;">&rarr;</td></tr>
+        </table>
+      </td>
+      <td valign="middle">
+        <div class="section-title" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:26px; line-height:1.25; font-weight:700; letter-spacing:-0.01em; color:#1D1B20;">
+          Upcoming events
+        </div>
+        <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.55; color:#49454F;">
+          After this week &middot; soonest first
+        </div>
+      </td>
+    </tr>
+    </table>
+
+    <!-- CCA start -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px; background-color:#FFFBFF; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" class="chips" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
+      <tr>
+        <td style="padding-right:8px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#FFDF9A; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#261A00; white-space:nowrap;">Activity</td>
+          </tr></table>
+        </td>
+        <td>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#F1ECF4; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:10px; font-weight:700; color:#49454F; white-space:nowrap;">In 11 days</td>
+          </tr></table>
+        </td>
+      </tr>
+      </table>
+      <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:20px; line-height:1.25; font-weight:800; color:#1D1B20;">Mon 31 Aug</div>
+      <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">CCA Season 1 activities start &middot; all three</div>
+      <div style="margin-top:16px;">
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=CCA%20Season%201%20starts&amp;dates=20260831/20260901&amp;location=Tokyo%20International%20School%2C%203-15-2%20Mita%2C%20Minato-ku%2C%20Tokyo"
+           style="display:inline-block; padding:10px 20px; background-color:#E9DDFF; border-radius:100px;
+                  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                  font-size:14px; font-weight:700; color:#22005D;">Add to calendar</a>
+      </div>
+    </td></tr>
+    </table>
+
+    <!-- LS BTSN -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#FFFBFF; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" class="chips" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
+      <tr>
+        <td style="padding-right:8px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#CFE5FF; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#001D33; white-space:nowrap;">Parent meeting</td>
+          </tr></table>
+        </td>
+        <td>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#F1ECF4; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:10px; font-weight:700; color:#49454F; white-space:nowrap;">In 14 days</td>
+          </tr></table>
+        </td>
+      </tr>
+      </table>
+      <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:20px; line-height:1.25; font-weight:800; color:#1D1B20;">Wed 3 Sep</div>
+      <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Lower School Back to School Night &middot; Malte, Vega-Lo + parents</div>
+      <div style="margin-top:16px;">
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Lower%20School%20Back%20to%20School%20Night&amp;dates=20260903/20260904&amp;location=Tokyo%20International%20School%2C%203-15-2%20Mita%2C%20Minato-ku%2C%20Tokyo"
+           style="display:inline-block; padding:10px 20px; background-color:#E9DDFF; border-radius:100px;
+                  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                  font-size:14px; font-weight:700; color:#22005D;">Add to calendar</a>
+      </div>
+    </td></tr>
+    </table>
+
+    <!-- US BTSN -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#FFFBFF; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" class="chips" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:12px;">
+      <tr>
+        <td style="padding-right:8px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#CFE5FF; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#001D33; white-space:nowrap;">Parent meeting</td>
+          </tr></table>
+        </td>
+        <td>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#F1ECF4; border-radius:100px; padding:4px 10px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:10px; font-weight:700; color:#49454F; white-space:nowrap;">In 21 days</td>
+          </tr></table>
+        </td>
+      </tr>
+      </table>
+      <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:20px; line-height:1.25; font-weight:800; color:#1D1B20;">Thu 10 Sep</div>
+      <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">Upper School Back to School Night &middot; Eldor + parents</div>
+      <div style="margin-top:16px;">
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Upper%20School%20Back%20to%20School%20Night&amp;dates=20260910/20260911&amp;location=Tokyo%20International%20School%2C%203-15-2%20Mita%2C%20Minato-ku%2C%20Tokyo"
+           style="display:inline-block; padding:10px 20px; background-color:#E9DDFF; border-radius:100px;
+                  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+                  font-size:14px; font-weight:700; color:#22005D;">Add to calendar</a>
+      </div>
+    </td></tr>
+    </table>
+
+    <!-- Cancelled -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#F7F2FA; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#6E6875;">
+        <strong style="text-decoration:line-through;">Oct 12 &mdash; High School Residential Trips</strong><br />Cancelled and removed from the calendar.
+      </div>
+    </td></tr>
+    </table>
+
+  </td>
+  </tr>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       7. HELPFUL LINKS — action cards, grouped by purpose
+       ══════════════════════════════════════════════════════════════════ -->
+  <tr>
+  <td class="px" style="padding:48px 32px 0 32px;">
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td width="56" valign="middle" style="width:56px; padding-right:16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#D7EFDF; border-radius:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:18px; line-height:1; color:#2E6B4F;">&#9670;</td></tr>
+        </table>
+      </td>
+      <td valign="middle">
+        <div class="section-title" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:26px; line-height:1.25; font-weight:700; letter-spacing:-0.01em; color:#1D1B20;">
+          Helpful links
+        </div>
+        <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.55; color:#49454F;">
+          The four you will actually use
+        </div>
+      </td>
+    </tr>
+    </table>
+
+    <!-- Category: school systems -->
+    <div style="margin-top:32px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">School systems</div>
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;">
+    <tr>
+      <td class="stack" width="48%" valign="top" style="width:48%; background-color:#FFFBFF; border-radius:16px; padding:24px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#E9DDFF; border-radius:100px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:18px; line-height:1; color:#6750A4;">&#9670;</td></tr>
+        </table>
+        <div style="margin-top:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; font-weight:700; color:#1D1B20;">OpenApply</div>
+        <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.5; color:#49454F;">Checklist and forms</div>
+        <div style="margin-top:16px;"><a href="https://tokyois.openapply.com/" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:700; color:#6750A4;">Open &rarr;</a></div>
+      </td>
+
+      <td class="stack-gap" width="4%" style="width:4%; font-size:0; line-height:0;">&nbsp;</td>
+
+      <td class="stack" width="48%" valign="top" style="width:48%; background-color:#FFFBFF; border-radius:16px; padding:24px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#CFE5FF; border-radius:100px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:18px; line-height:1; color:#00629E;">&#9679;</td></tr>
+        </table>
+        <div style="margin-top:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; font-weight:700; color:#1D1B20;">Toddle</div>
+        <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.5; color:#49454F;">Placements from Fri 21</div>
+        <div style="margin-top:16px;"><a href="https://web.toddleapp.com/" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:700; color:#00629E;">Open &rarr;</a></div>
+      </td>
+    </tr>
+    </table>
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;">
+    <tr>
+      <td class="stack" width="48%" valign="top" style="width:48%; background-color:#FFFBFF; border-radius:16px; padding:24px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#DDE1FF; border-radius:100px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:18px; line-height:1; color:#4F5B92;">&#9632;</td></tr>
+        </table>
+        <div style="margin-top:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; font-weight:700; color:#1D1B20;">Parent Portal</div>
+        <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.5; color:#49454F;">Notices and TIS Times</div>
+        <div style="margin-top:16px;"><a href="https://portal.tokyois.com/" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:700; color:#4F5B92;">Open &rarr;</a></div>
+      </td>
+
+      <td class="stack-gap" width="4%" style="width:4%; font-size:0; line-height:0;">&nbsp;</td>
+
+      <td class="stack" width="48%" valign="top" style="width:48%; background-color:#FFFBFF; border-radius:16px; padding:24px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr><td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background-color:#FFDF9A; border-radius:100px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:18px; line-height:1; color:#7A5900;">&#9873;</td></tr>
+        </table>
+        <div style="margin-top:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:17px; font-weight:700; color:#1D1B20;">Parent Calendar</div>
+        <div style="margin-top:4px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.5; color:#49454F;">All school dates</div>
+        <div style="margin-top:16px;"><a href="https://calendar.google.com/calendar/embed?src=parents.calendar%40tokyois.com&amp;ctz=Asia%2FTokyo" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:700; color:#7A5900;">Open &rarr;</a></div>
+      </td>
+    </tr>
+    </table>
+
+    <!-- Category: food & reference -->
+    <div style="margin-top:32px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">Food &amp; reference</div>
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#F7F2FA; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td width="40" valign="top" style="width:40px; padding-right:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:18px; line-height:1.4; color:#2E6B4F;">&#9679;</td>
+        <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">
+          <a href="https://docs.google.com/presentation/d/1_xHs35mN006-ctsU0JbFyiJlKNNlIv6oonGJNjaSIug/edit?usp=sharing" style="color:#2E6B4F; font-weight:700;">Kiwi Kitchen</a> &mdash; lunch ordering
+        </td>
+      </tr>
+      <tr>
+        <td width="40" valign="top" style="width:40px; padding-top:16px; padding-right:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:18px; line-height:1.4; color:#6750A4;">&#9679;</td>
+        <td valign="top" style="padding-top:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.5; color:#49454F;">
+          <a href="https://docs.google.com/spreadsheets/d/1aVYeescc-wh9adyruqn8F_qB3Trer6ouiYkcujgKMu8/edit?gid=1810466804#gid=1810466804" style="color:#6750A4; font-weight:700;">Key Dates 2026-27</a> &mdash; full year at a glance
+        </td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+    <!-- Category: people -->
+    <div style="margin-top:32px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#49454F;">Who to contact</div>
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px; background-color:#FFFBFF; border-radius:16px;">
+    <tr><td style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td valign="top" style="padding-bottom:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.5; color:#49454F;">Emergency &amp; OpenApply<br /><a href="mailto:nanaim@tokyois.com" style="font-size:16px; color:#00629E; font-weight:700;">Nana Imamura</a></td>
+        <td valign="top" style="padding-bottom:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.5; color:#49454F;">Admissions<br /><a href="mailto:ayasu@tokyois.com" style="font-size:16px; color:#00629E; font-weight:700;">Aya Suzuki</a></td>
+      </tr>
+      <tr>
+        <td valign="top" style="padding-bottom:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.5; color:#49454F;">CCA<br /><a href="mailto:makotoko@tokyois.com" style="font-size:16px; color:#00629E; font-weight:700;">Makoto</a></td>
+        <td valign="top" style="padding-bottom:16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.5; color:#49454F;">SchoolsBuddy &amp; Toddle IT<br /><a href="mailto:jench@tokyois.com" style="font-size:16px; color:#00629E; font-weight:700;">Jen (IT)</a></td>
+      </tr>
+      <tr>
+        <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.5; color:#49454F;">Beyond the Bell<br /><a href="mailto:operations@tokyois.com" style="font-size:16px; color:#00629E; font-weight:700;">Operations</a></td>
+        <td valign="top" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.5; color:#49454F;">TFC Buddy matching<br /><a href="mailto:tfc_coordinator@tokyois.com" style="font-size:16px; color:#00629E; font-weight:700;">TFC Coordinator</a></td>
+      </tr>
+      </table>
+    </td></tr>
+    </table>
+
+  </td>
+  </tr>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       8. FOOTER
+       ══════════════════════════════════════════════════════════════════ -->
+  <tr>
+  <td class="px" style="padding:64px 32px 40px 32px;">
+
+    <!-- Sign-off -->
+    <div style="text-align:center; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+         font-size:20px; line-height:1.4; font-weight:700; color:#1D1B20;">
+      Have a wonderful week
+    </div>
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:32px; background-color:#1D1B20; border-radius:24px;">
+    <tr><td style="padding:32px 24px;">
+
+      <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:18px; font-weight:700; color:#FFFFFF;">
+        Tokyo International School
+      </div>
+      <div style="margin-top:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:14px; line-height:1.5; color:#D0C7DA;">
+        Takanawa Gateway City, 3-15-2 Mita, Minato-ku, Tokyo 108-0073
+      </div>
+
+      <!-- Quick actions -->
+      <table role="presentation" class="chips" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;">
+      <tr>
+        <td style="padding-right:8px;">
+          <a href="tel:+81354841160" style="display:inline-block; padding:12px 20px; background-color:#4F4552; border-radius:100px;
+             font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:14px; font-weight:700; color:#FFFFFF; white-space:nowrap;">Call school</a>
+        </td>
+        <td style="padding-right:8px;">
+          <a href="https://maps.google.com/?q=Tokyo+International+School+3-15-2+Mita+Minato-ku+Tokyo" style="display:inline-block; padding:12px 20px; background-color:#4F4552; border-radius:100px;
+             font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:14px; font-weight:700; color:#FFFFFF; white-space:nowrap;">Map</a>
+        </td>
+        <td>
+          <a href="https://www.tokyois.com" style="display:inline-block; padding:12px 20px; background-color:#4F4552; border-radius:100px;
+             font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:14px; font-weight:700; color:#FFFFFF; white-space:nowrap;">Website</a>
+        </td>
+      </tr>
+      </table>
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:32px;">
+      <tr><td height="1" style="height:1px; background-color:#4F4552; font-size:0; line-height:0;">&nbsp;</td></tr>
+      </table>
+
+      <!-- Provenance, kept to one line. Full source list lives in the portal. -->
+      <div style="margin-top:24px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:13px; line-height:1.5; color:#B5ACC0;">
+        Compiled Thu 20 Aug 2026 from Gmail, OpenApply, Toddle and the TIS Parent Portal.
+        Messages sent once per child are merged into a single item.
+      </div>
+
+      <!-- Browser-only print control. Email clients strip onclick; harmless there. -->
+      <div class="no-print" style="margin-top:24px;">
+        <button onclick="window.print()" style="padding:10px 20px; font-size:13px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#D0C7DA; border:1px solid #4F4552; border-radius:100px; cursor:pointer; background:transparent;">
+          Print / Save as PDF
+        </button>
+      </div>
+
+    </td></tr>
+    </table>
+
+  </td>
+  </tr>
+
+
+  </table>
+  <!--[if mso]></td></tr></table><![endif]-->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
