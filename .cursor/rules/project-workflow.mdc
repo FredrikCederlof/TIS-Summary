@@ -1,0 +1,64 @@
+---
+description: TIS-Summary project workflow — knowledge file protocol, design-before-coding discipline, and definition of done.
+alwaysApply: true
+---
+
+# TIS-Summary — Project Workflow
+
+## Start every session by reading these four files
+
+```
+~/Projects/TIS-Summary/memory.md       — family, children, school contacts, credentials
+~/Projects/TIS-Summary/architecture.md — system components and data flow
+~/Projects/TIS-Summary/decisions.md    — why things were built the way they were
+~/Projects/TIS-Summary/todo.md         — open next steps
+```
+
+Do not rely on chat history. These files are the project's permanent knowledge base.
+
+## Knowledge file update protocol
+
+Whenever you make a significant decision, update the relevant file **and notify Fredrik immediately**:
+
+| What changed | Update |
+|---|---|
+| New school fact, contact, credential, family note | `memory.md` |
+| System structure, component, data flow | `architecture.md` |
+| Technical or design decision with rationale | `decisions.md` |
+| Work item added, completed, or cancelled | `todo.md` |
+
+Never silently update project knowledge. Always tell Fredrik which file was modified and what changed.
+
+## Design-before-coding discipline
+
+Before writing any UI code:
+
+1. What is the purpose of this screen / section?
+2. What is the primary user action?
+3. What is the information hierarchy?
+4. Which SDK components serve this content best?
+5. Plan the layout.
+6. Then implement.
+
+Never start with a `<Stack>` of raw data. Think first.
+
+## Quality standard
+
+Every canvas must look like a polished, production-ready dashboard — comparable to Google Workspace, Linear, or Notion. Ask yourself before finishing:
+
+- Does this look like something Google would ship?
+- Is the hierarchy immediately obvious?
+- Would I proudly include this in a portfolio?
+
+If the answer to any of these is "no", keep improving.
+
+## Definition of done
+
+A canvas run is complete only when:
+
+- [ ] All data for the target week is extracted and deduplicated
+- [ ] Canvas renders without TypeScript errors
+- [ ] Layout follows the M3 design system (see `canvas-design-system.mdc`)
+- [ ] A short chat recap lists the actions that cannot wait
+- [ ] Any new school facts are added to `memory.md`
+- [ ] Fredrik has been notified of any knowledge file updates

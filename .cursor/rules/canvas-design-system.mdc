@@ -1,0 +1,136 @@
+---
+description: Material Design 3 design system for TIS-Summary canvas files. Enforces component primitives, color roles, typography hierarchy, and SDK constraints.
+globs: **/*.canvas.tsx
+alwaysApply: false
+---
+
+# TIS Canvas — Material Design 3 Design System
+
+## Quality target
+
+Every canvas must feel like a polished, production-ready dashboard — comparable to Google Workspace or Linear. Never generate a prototype. Design before writing any JSX: understand the information hierarchy, identify primary actions, select components, plan the layout — then implement.
+
+## SDK constraints (hard rules)
+
+- Import **only** from `cursor/canvas` (plus `import type { ReactNode } from "react"` for type annotations)
+- **No `box-shadow`** — elevation is expressed through tonal background fills only
+- **No gradients** — flat solid token colors only
+- **No emojis** as decoration, icons, or bullets
+- **No hardcoded hex** — all colors from `useHostTheme()` tokens
+- **No `fetch()`** — all data inline
+- `<div style={...}>` with theme tokens IS appropriate for tonal surface containers the SDK doesn't expose as named components
+
+## Required helper components (define in every canvas)
+
+```tsx
+// M3 "Surface Container" — primary section wrapper
+function SurfaceContainer({ children, radius = 16, padding = "20px 24px" }) {
+  const theme = useHostTheme();
+  return <div style={{ background: theme.fill.secondary, borderRadius: radius, padding }}>{children}</div>;
+}
+
+// M3 "Label Large" — small-caps category label above H2
+function SectionLabel({ children }) {
+  const theme = useHostTheme();
+  return (
+    <Text size="small" weight="semibold"
+      style={{ color: theme.accent.primary, textTransform: "uppercase", letterSpacing: "0.08em" }}>
+      {children}
+    </Text>
+  );
+}
+
+// M3 stat tile — large metric, colored left-border accent
+function M3StatTile({ value, label, accentColor }) {
+  const theme = useHostTheme();
+  return (
+    <div style={{ background: theme.fill.tertiary, borderRadius: 12, padding: "14px 18px",
+      borderLeft: `4px solid ${accentColor}`, flex: "1 1 120px" }}>
+      <div style={{ fontSize: 22, fontWeight: 700, color: theme.text.primary, marginBottom: 4 }}>{value}</div>
+      <Text size="small" tone="secondary">{label}</Text>
+    </div>
+  );
+}
+
+// M3 "Color Container" card — full category-color banner, tonal body
+function StudentCard({ name, chipLabels, accentColor, children }) {
+  const theme = useHostTheme();
+  return (
+    <div style={{ borderRadius: 20, overflow: "hidden", border: `1px solid ${theme.stroke.tertiary}` }}>
+      <div style={{ background: accentColor, padding: "18px 20px 14px" }}>
+        <div style={{ fontSize: 18, fontWeight: 700, color: theme.text.onAccent, marginBottom: 8 }}>{name}</div>
+        <Row gap={6} wrap>
+          {chipLabels.map((l, i) => <span key={i}><Pill size="sm" active>{l}</Pill></span>)}
+        </Row>
+      </div>
+      <div style={{ background: theme.fill.quaternary, padding: "16px 20px" }}>
+        <Stack gap={8}>{children}</Stack>
+      </div>
+    </div>
+  );
+}
+
+// M3 list row — divider-separated, no card wrapper
+function ContactRow({ label, href, name }) {
+  const theme = useHostTheme();
+  return (
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between",
+      padding: "10px 0", borderBottom: `1px solid ${theme.stroke.tertiary}`, gap: 8 }}>
+      <Text size="small" tone="secondary">{label}</Text>
+      <Link href={href}>{name}</Link>
+    </div>
+  );
+}
+```
+
+## Layout conventions
+
+| Section | Pattern |
+|---|---|
+| Hero | `fill.primary` bg, `borderRadius: 28`, 28/32px padding. H1 + active Pill chips + `M3StatTile` row |
+| Section header | `<SectionLabel>` immediately above `<H2>` — no accent bars or decorative borders |
+| Major sections | Wrapped in `<SurfaceContainer>` |
+| Collapsible detail | `<Card collapsible defaultOpen>` |
+| Per-child content | `<Grid columns={3}>` of `<StudentCard>` |
+| Operational info | `<Grid columns={2}>` of `<SurfaceContainer radius={14}>` |
+| Contacts / links | `<Grid columns={2}>` of `<Stack>` with `<ContactRow>` list items (not Card wrappers) |
+| Secondary content | `<CollapsibleSection>` after `<Divider />` (closed by default) |
+
+## Color roles
+
+| Role | Token | Used for |
+|---|---|---|
+| Urgency | `theme.category.orange` / `theme.category.red` | Deadline stat tiles, warning indicators |
+| Info | `theme.category.blue` / `theme.category.green` | Event stat tiles |
+| Malte | `theme.category.green` | StudentCard banner only |
+| Eldor | `theme.category.blue` | StudentCard banner only |
+| Vega-Lo | `theme.category.pink` | StudentCard banner only |
+| Section labels | `theme.accent.primary` | SectionLabel text only |
+
+## Typography hierarchy (M3 scale mapped to SDK)
+
+| M3 role | SDK component | Usage |
+|---|---|---|
+| Display / Headline | `<H1>` | Page title (once, in hero) |
+| Title Large | `<H2>` | Section names |
+| Title Small | `<Text weight="semibold">` | Card sub-headings |
+| Body | `<Text>` | Content |
+| Label | `<Text size="small" tone="secondary">` | Metadata, captions |
+| Label caps | `<SectionLabel>` | Section category labels |
+
+## Spacing system (8px base)
+
+`gap` values must be multiples of 8: 4, 8, 12, 16, 20, 24, 28, 32. Never use arbitrary values.
+
+## Pre-delivery checklist
+
+Before returning canvas code:
+1. Does the layout have clear visual hierarchy? One element should stand out.
+2. Is the hero an M3 Extra-Large Container (28px radius, `fill.primary`)?
+3. Are all sections wrapped in `SurfaceContainer` or an equivalent tonal container?
+4. Does each section open with `SectionLabel` → `H2`?
+5. Are child cards using the correct identity colors?
+6. Are contacts/links rendered as list rows, not cards?
+7. Is secondary content (Coming Up, Sources) in collapsed `CollapsibleSection`?
+8. Slop check: no gradients, no shadows, no emojis, no rainbow coloring, no identical wall of cards.
+9. Would this look at home in a Google Workspace product?
