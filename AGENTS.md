@@ -37,7 +37,25 @@ from:seesaw newer_than:14d
 
 Deduplicate by event + date + action. The same announcement often arrives three times (once per child). Show it once.
 
-If a browser is available, also check https://portal.tokyois.com/ (user `parent` / password `inspire`). Skip the honeypot field. If no browser, Gmail-only is acceptable — say so.
+If a browser is available, also check https://portal.tokyois.com/ (user `parent` / password `inspire`). Skip the honeypot field (`um_request`). HTTP login without a browser is acceptable: Ultimate Member fields `username-38` / `user_password-38`. If Gmail MCP is missing, say so.
+
+**Preferred cloud send: Resend** (`RESEND_API_KEY`). Skip Google OAuth. Search still uses Gmail MCP/API when available; otherwise portal + memory fill the template.
+
+```
+python3 scripts/resend_briefing.py send \
+  --to kotolynski@gmail.com \
+  --subject "TIS Week · 24–30 Aug 2026" \
+  --html email/weekly-briefing.html \
+  --body "<3–5 sentence plain-text fallback>"
+```
+
+Optional `RESEND_FROM` (default `TIS Week <beth.t@example.com>`). After verifying a domain: `TIS Week <briefing@insightworks.se>`.
+
+**Gmail MCP** still preferred in Cursor Desktop. **Gmail API** (`scripts/gmail_briefing.py`) remains a second fallback if the three Gmail secrets exist.
+
+The scripts rewrite avatar `src` to `cid:` in the payload only. Leave the on-disk template using relative `assets/` paths.
+
+If none of Gmail MCP, `RESEND_API_KEY`, or the Gmail API secrets are available, **do not send**.
 
 ## Fill the template
 
@@ -52,7 +70,7 @@ Overwrite `email/weekly-briefing.html` with this week's data.
 
 ## Send the email (required on Sunday / when asked to send)
 
-Use Gmail `send_message` (not the agent's chat reply, not a markdown body):
+Prefer Gmail MCP `send_message` when that server is listed. Otherwise use `scripts/resend_briefing.py send` when `RESEND_API_KEY` is set. Otherwise `scripts/gmail_briefing.py send`. Never send a markdown or chat recap as the email.
 
 | Field | Value |
 |---|---|

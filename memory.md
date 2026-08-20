@@ -28,6 +28,10 @@ Notes:
 - **Campus:** Takanawa Gateway City (TAKANAWA GATEWAY CITY RESIDENCE, 3-15-2 Mita, Minato-ku, Tokyo 108-0073) — new from Aug 2026
 - **Phone:** +81(3)-5484-1160
 - **Website:** www.tokyois.com
+- **Car:** no on-campus drop-off/pick-up. Use Times Parking **TAKANAWA GATEWAY CITY P2** (expected); 30-minute free ticket from the school office. Do not park on the street.
+- **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
+- **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
+- **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
 
 ## School hours (from Aug 25, 2026)
 
@@ -63,6 +67,7 @@ Notes:
 | Daniel Reynolds | Head of School | danielre@tokyois.com |
 | Patricia G. | Eldor's previous teacher | patriciago@tokyois.com |
 | TFC coordinator | WhatsApp / buddy matching | tfc_coordinator@tokyois.com |
+| TFC buddy matching | New-family buddy programme (TIS Times 17 Jun 2026) | tfc_buddy@tokyois.com |
 
 ## Known year-start facts (2026-27)
 

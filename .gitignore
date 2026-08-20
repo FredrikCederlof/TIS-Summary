@@ -1,0 +1,9 @@
+# Local OAuth leftovers — never commit tokens
+.env
+.env.*
+gmail-oauth.env
+token.json
+credentials.json
+client_secret*.json
+__pycache__/
+*.pyc
