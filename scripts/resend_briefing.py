@@ -49,7 +49,38 @@ def _from_addr() -> str:
     return os.environ.get("RESEND_FROM", "").strip() or DEFAULT_FROM
 
 
-def build_payload(*, to: str, subject: str, html: str, body: str, asset_dir: Path) -> dict:
+USER_AGENT = "TIS-Summary-resend/1.0"
+
+
+def _normalize_addrs(values) -> list[str]:
+    if not values:
+        return []
+    if isinstance(values, str):
+        values = [values]
+    out: list[str] = []
+    seen: set[str] = set()
+    for item in values:
+        for part in str(item).split(","):
+            addr = part.strip()
+            if not addr:
+                continue
+            key = addr.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append(addr)
+    return out
+
+
+def build_payload(
+    *,
+    to: list[str],
+    subject: str,
+    html: str,
+    body: str,
+    asset_dir: Path,
+    cc: list[str] | None = None,
+) -> dict:
     attachments = []
     for name in AVATAR_FILES:
         path = asset_dir / name
@@ -62,14 +93,17 @@ def build_payload(*, to: str, subject: str, html: str, body: str, asset_dir: Pat
                 "content_id": name,
             }
         )
-    return {
+    payload = {
         "from": _from_addr(),
-        "to": [to],
+        "to": to,
         "subject": subject,
         "html": rewrite_html_cids(html),
         "text": body,
         "attachments": attachments,
     }
+    if cc:
+        payload["cc"] = cc
+    return payload
 
 
 def cmd_check(_: argparse.Namespace) -> None:
@@ -84,17 +118,21 @@ def cmd_send(args: argparse.Namespace) -> None:
     html = html_path.read_text(encoding="utf-8")
     if "<!DOCTYPE html" not in html[:200] and "<html" not in html[:400].lower():
         sys.exit("Refusing to send: html file is not a full HTML document.")
+    to = _normalize_addrs(args.to) or [DEFAULT_TO]
+    cc = _normalize_addrs(args.cc)
     payload = build_payload(
-        to=args.to,
+        to=to,
         subject=args.subject,
         html=html,
         body=args.body,
         asset_dir=Path(args.assets),
+        cc=cc,
     )
     if args.dry_run:
         preview = {
             "from": payload["from"],
             "to": payload["to"],
+            "cc": payload.get("cc", []),
             "subject": payload["subject"],
             "text": payload["text"],
             "html_has_cid": "cid:avatar-eldor.png" in payload["html"],
@@ -113,6 +151,7 @@ def cmd_send(args: argparse.Namespace) -> None:
         headers={
             "Authorization": f"Bearer {_api_key()}",
             "Content-Type": "application/json",
+            "User-Agent": USER_AGENT,
         },
     )
     try:
@@ -120,8 +159,27 @@ def cmd_send(args: argparse.Namespace) -> None:
             result = json.loads(resp.read().decode())
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode(errors="replace")[:800]
+        lower = detail.lower()
+        if exc.code in (403, 422) and (
+            "not verified" in lower or "domain is not verified" in lower
+        ):
+            sys.exit(
+                "Resend rejected the From address: domain is not verified. "
+                "Set RESEND_FROM to a verified domain, then start a new run."
+            )
         sys.exit(f"Resend send failed ({exc.code}): {detail}")
-    print(json.dumps({"sent": True, **result, "to": args.to, "subject": args.subject}, indent=2))
+    print(
+        json.dumps(
+            {
+                "sent": True,
+                **result,
+                "to": to,
+                "cc": cc,
+                "subject": args.subject,
+            },
+            indent=2,
+        )
+    )
 
 
 def main() -> None:
@@ -129,7 +187,18 @@ def main() -> None:
     sub = parser.add_subparsers(dest="cmd", required=True)
     sub.add_parser("check", help="Verify RESEND_API_KEY exists")
     send_p = sub.add_parser("send", help="Send the filled weekly-briefing HTML")
-    send_p.add_argument("--to", default=DEFAULT_TO)
+    send_p.add_argument(
+        "--to",
+        action="append",
+        default=[],
+        help="Recipient. Repeatable. Defaults to kotolynski@gmail.com.",
+    )
+    send_p.add_argument(
+        "--cc",
+        action="append",
+        default=[],
+        help="CC recipient. Repeatable. Use sternersofia@gmail.com for Sofia.",
+    )
     send_p.add_argument("--subject", required=True)
     send_p.add_argument("--html", default=str(DEFAULT_HTML))
     send_p.add_argument("--body", required=True)
