@@ -57,7 +57,7 @@ The Sunday prompt must say **fill and send `email/weekly-briefing.html`**. If it
 | MCP | Used for | Status |
 |---|---|---|
 | `gmail` (Cursor Gmail plugin) | Search + send | **Desktop chat: works.** Cloud Sunday automation: plugin files sync as static; no `gmail` MCP server is registered. |
-| Resend API (`scripts/resend_briefing.py`) | Send HTML briefing | **Preferred cloud send.** Secret `RESEND_API_KEY` (optional `RESEND_FROM`). Does not search Gmail. |
+| Resend API (`scripts/resend_briefing.py`) | Send HTML briefing | **Preferred cloud send.** Secret `RESEND_API_KEY` (optional `RESEND_FROM`). Always CC `sternersofia@gmail.com`. Does not search Gmail. |
 | Gmail API (`scripts/gmail_briefing.py`) | Search + send when MCP is missing | Optional. Secrets `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, `GMAIL_REFRESH_TOKEN`. |
 | `cursor-ide-browser` | portal.tokyois.com login + scraping | Desktop only. Cloud runs: Gmail-only is the contract; portal can still be fetched with HTTP login (skip honeypot `um_request`). |
 | `cursor-app-control` | Open Automations editor | Desktop only |
