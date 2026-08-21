@@ -2,11 +2,15 @@
 
 Log of choices made and why.
 
-## 2026-08-21 — Cloud run had Gmail MCP and sent via Resend
+## 2026-08-21 — Cloud run had Gmail MCP; Resend send blocked on unverified From domain
 
-Sunday-style automation on `cursor/tis-weekly-parent-briefing-6a58` found `email/weekly-briefing.html` and `scripts/resend_briefing.py` in the attached repo. Gmail MCP was registered this run, so inbox search covered the last 14 days (tokyois.com, OpenApply, Toddle, ManageBac; no SchoolsBuddy or Seesaw mail). Portal login (skip `um_request`) confirmed latest TIS Times is still 17 Jun 2026. Briefing filled for **24–30 Aug 2026** and sent with `scripts/resend_briefing.py` only.
+Sunday-style automation on `cursor/tis-weekly-parent-briefing-6a58` found `email/weekly-briefing.html` and `scripts/resend_briefing.py` in the attached repo. Gmail MCP was registered this run, so inbox search covered the last 14 days (tokyois.com, OpenApply, Toddle, ManageBac; no SchoolsBuddy or Seesaw mail). Portal login (skip `um_request`) confirmed latest TIS Times is still 17 Jun 2026. Briefing filled for **24–30 Aug 2026**.
 
-**Decision:** keep Resend as the cloud send path even when Gmail MCP can search. Do not send via Gmail `send_message` from the Sunday automation.
+`RESEND_API_KEY` was present. First POST was Cloudflare 1010 (Python urllib UA); fixed by setting `User-Agent: TIS-Summary-resend/1.0`. Second POST reached Resend and returned 403: `example.com` is not verified. Retry with documented `TIS Week <briefing@insightworks.se>` also 403 (insightworks.se not verified).
+
+**Decision:** follow AGENTS.md — Resend only; do not fall back to Gmail `send_message` or a markdown recap. Leave the filled HTML on disk. Next run needs a verified domain and `RESEND_FROM`.
+
+`cursor-cloud` `environment-info` reported no linked Cloud Environment (`environment: null`) even though the API key was injected.
 
 ---
 
