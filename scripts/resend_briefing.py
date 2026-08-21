@@ -113,6 +113,7 @@ def cmd_send(args: argparse.Namespace) -> None:
         headers={
             "Authorization": f"Bearer {_api_key()}",
             "Content-Type": "application/json",
+            "User-Agent": "TIS-Summary-resend/1.0",
         },
     )
     try:

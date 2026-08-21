@@ -2,6 +2,14 @@
 
 Log of choices made and why.
 
+## 2026-08-21 — Briefing filled from Gmail + portal; send via Resend only
+
+Gmail MCP was registered. Searched last 14 days (tokyois.com, OpenApply, Toddle, ManageBac, SchoolsBuddy, Seesaw, TIS keywords) and deduped the Head of School welcome (3 copies). Portal login (skip honeypot `um_request`) still shows TIS Times 17 Jun 2026. Public parent calendar confirms orientation PM 24 Aug, Day 1 25 Aug, TFC party 27 Aug, Hopes & Dreams + No Number Day 28 Aug, CCA start 31 Aug.
+
+**Decision:** overwrite `email/weekly-briefing.html` for 24–30 Aug with Friday-relative dates (CCA already open; Toddle placements live today). Send only via `scripts/resend_briefing.py`. Added `User-Agent: TIS-Summary-resend/1.0` so Cloudflare does not 1010 the POST.
+
+---
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.
