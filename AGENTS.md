@@ -87,3 +87,15 @@ Inline avatars so they survive image blocking:
 If the template cannot be filled, **do not send**. Report the failure in the run log instead of falling back to a plain-text briefing.
 
 Chat recap after send: the 3–5 actions that cannot wait. That recap is for the run log, not the email body.
+
+## Cursor Cloud specific instructions
+
+Environment notes for future cloud agents (the startup update script has already run):
+
+- **No dependencies to install.** The scripts in `scripts/` use only the Python 3 standard library (`urllib`, `json`, `base64`, `email`, `http.server`). There is no `requirements.txt`, `venv`, `pyproject.toml`, or lockfile. Just run `python3` (3.12 is present).
+- **Nothing to build and no long-running service.** This repo is on-demand CLI scripts plus a static HTML template — there is no dev server, watcher, or daemon to start.
+- **No test suite or committed linter.** The `# noqa` comments imply ruff/flake8 was used, but no config is committed. Use `python3 -m py_compile scripts/*.py` as the syntax check.
+- **Preview the product** by opening `email/weekly-briefing.html` in a browser; the relative `assets/` avatar paths resolve locally.
+- **Exercise the send pipeline without sending** via `python3 scripts/resend_briefing.py send --subject "…" --body "…" --dry-run` (validates the HTML doc, rewrites avatar `src` to `cid:`, and base64-attaches the three avatars).
+- **Resend key is send-restricted.** Read endpoints (`GET /domains`, `GET /api-keys`) return `401 restricted_api_key` — that is expected and confirms the key is valid and scoped to send only, not an error.
+- **Gmail API fallback needs all three secrets.** In cloud, `GMAIL_REFRESH_TOKEN` is often unset, so `scripts/gmail_briefing.py` search/send will exit with "Missing secrets". Prefer the Gmail MCP (when registered) or Resend; do not treat the missing token as a setup failure.
