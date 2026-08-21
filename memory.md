@@ -29,7 +29,7 @@ Notes:
 - **Phone:** +81(3)-5484-1160
 - **Website:** www.tokyois.com
 - **Car:** no on-campus drop-off/pick-up. Use Times Parking **TAKANAWA GATEWAY CITY P2** (expected); 30-minute free ticket from the school office. Do not park on the street.
-- **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
+- **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00. Taxi drop-off: National Route 15 (Dai-Ichi Keihin), not in front of campus. P2 parkers who attend the ceremony get an Ogawa Coffee / pastry voucher at Mimure (Link Pillar 2).
 - **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
 - **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
 
@@ -73,7 +73,7 @@ Notes:
 
 - Toddle fully replaces Seesaw and Parent Portal for class communication.
 - Toddle access for parents opens **Fri 21 Aug 2026** (class placements visible).
-- CCA Season 1 sign-up: opens 20 Aug 15:00, closes 25 Aug 15:00 (preference-based, not first-come).
+- CCA Season 1 sign-up: opens 20 Aug 15:00, closes 25 Aug 15:00 (preference-based, not first-come). Allocation results by Fri 28 Aug. Season 1 runs Mon 31 Aug – Fri 13 Nov 2026.
 - CCA Season 1 activities start: Mon 31 Aug 2026.
 - Beyond the Bell (KG-G5 childcare to 18:00) starts: Tue 25 Aug 2026.
 - Parent ID lanyards distributed at Hopes & Dreams conference (Fri 28 Aug).

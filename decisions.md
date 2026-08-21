@@ -2,6 +2,14 @@
 
 Log of choices made and why.
 
+## 2026-08-21 — Cloud run had Gmail MCP and sent via Resend
+
+Sunday-style automation on `cursor/tis-weekly-parent-briefing-6a58` found `email/weekly-briefing.html` and `scripts/resend_briefing.py` in the attached repo. Gmail MCP was registered this run, so inbox search covered the last 14 days (tokyois.com, OpenApply, Toddle, ManageBac; no SchoolsBuddy or Seesaw mail). Portal login (skip `um_request`) confirmed latest TIS Times is still 17 Jun 2026. Briefing filled for **24–30 Aug 2026** and sent with `scripts/resend_briefing.py` only.
+
+**Decision:** keep Resend as the cloud send path even when Gmail MCP can search. Do not send via Gmail `send_message` from the Sunday automation.
+
+---
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.
