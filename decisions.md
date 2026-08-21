@@ -2,6 +2,16 @@
 
 Log of choices made and why.
 
+## 2026-08-21 — Sunday briefing filled from Gmail MCP + portal, sent via Resend
+
+Gmail MCP was registered. Search of last 14 days (including trash) found new Toddle mail on 21 Aug: class placements, Hopes & Dreams slot times, Opening Ceremony extra notes, Guest Wi-Fi code, PYP Choir invitation, and Toddle access restored. Deduped the Head of School welcome (three OpenApply copies) and school-wide Toddle circulars that tagged all three children.
+
+Parent portal HTTP login (skip `um_request`) confirmed latest TIS Times is still **17 Jun 2026**.
+
+**Decision:** overwrite `email/weekly-briefing.html` in place (same MD3 table layout) and send with Resend to `kotolynski@gmail.com` plus CC `sternersofia@gmail.com`. `scripts/resend_briefing.py` now accepts repeated `--to` / `--cc` and sends `User-Agent: TIS-Summary-resend/1.0` so Cloudflare does not return 1010.
+
+---
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.

@@ -7,7 +7,7 @@ Permanent knowledge. Update when new facts are confirmed. Never delete; mark out
 | Person | Role | Email |
 |---|---|---|
 | Fredrik Sterner Cederlöf | Parent (primary) | kotolynski@gmail.com |
-| Sofia Sterner Cederlöf | Parent (partner) | sofia.sterner@volvocars.com |
+| Sofia Sterner Cederlöf | Parent (partner) | sofia.sterner@volvocars.com · sternersofia@gmail.com |
 
 ## Children
 
@@ -19,6 +19,7 @@ Permanent knowledge. Update when new facts are confirmed. Never delete; mark out
 
 Notes:
 - Eldor is EAL-monitored in G6 — no extra lessons, in-class support only (confirmed Tomomi Mizuno, Jun 2026).
+- **2026-27 placements (Toddle, 21 Aug 2026):** Eldor **6B** with Chrissy Erwin, room 112. Malte **3B** with Jared Barnes, room 216. Vega-Lo **Kindergarten A** with Claudia Ackermann and Laura (learning assistant), room 202.
 - Siblings will be placed in the same House.
 - Bus requests for Eldor and Malte were removed from re-enrolment forms (March 2026, Sofia's note). Re-confirm if bus is needed.
 
@@ -29,9 +30,10 @@ Notes:
 - **Phone:** +81(3)-5484-1160
 - **Website:** www.tokyois.com
 - **Car:** no on-campus drop-off/pick-up. Use Times Parking **TAKANAWA GATEWAY CITY P2** (expected); 30-minute free ticket from the school office. Do not park on the street.
-- **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
+- **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Doors close 09:00 sharp; do not arrive much before 08:30. Phones off during the ceremony (school will share professional photos/video). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00. Taxi drop-off on National Route 15 (Dai-Ichi Keihin), not the approach road. Families parking at Times P2 and attending the ceremony get an Ogawa Coffee voucher at Mimure, Link Pillar 2.
+- **Guest Wi-Fi (from 21 Aug 2026):** network `TIS Guest`, code `17938-73936` (valid ~30 days while settling in).
 - **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
-- **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
+- **Latest TIS Times as of 21 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
 
 ## School hours (from Aug 25, 2026)
 
@@ -68,13 +70,19 @@ Notes:
 | Patricia G. | Eldor's previous teacher | patriciago@tokyois.com |
 | TFC coordinator | WhatsApp / buddy matching | tfc_coordinator@tokyois.com |
 | TFC buddy matching | New-family buddy programme (TIS Times 17 Jun 2026) | tfc_buddy@tokyois.com |
+| Chrissy Erwin | Eldor 6B homeroom (room 112) | christineer@tokyois.com |
+| Jared Barnes | Malte 3B homeroom (room 216) | (Toddle 21 Aug 2026; email not in announcement) |
+| Claudia Ackermann | Vega-Lo KA homeroom (room 202) | claudiaac@tokyois.com |
+| Laura | KA learning assistant (room 202) | (first name only in Toddle welcome) |
+| Yui Narita | PYP Music / Choir | (permission slips to PYP Music Room, 1st floor) |
 
 ## Known year-start facts (2026-27)
 
 - Toddle fully replaces Seesaw and Parent Portal for class communication.
-- Toddle access for parents opens **Fri 21 Aug 2026** (class placements visible).
-- CCA Season 1 sign-up: opens 20 Aug 15:00, closes 25 Aug 15:00 (preference-based, not first-come).
-- CCA Season 1 activities start: Mon 31 Aug 2026.
+- Toddle access for parents opened **Fri 21 Aug 2026**; access restored the same afternoon after the year-roll. Class placements: Eldor 6B, Malte 3B, Vega-Lo KA.
+- **Hopes & Dreams Fri 28 Aug 2026 (parents only):** Malte 08:15 room 216; Vega-Lo 08:45 room 202; Eldor 09:15 room 112. Complete each teacher’s Google Form and bring the emailed copy. Lower School childcare for the conference slot only; none for Upper School.
+- CCA Season 1 sign-up: opened 20 Aug 15:00, closes 25 Aug 15:00 (preference-based, not first-come). Allocation results by Fri 28 Aug. Season 1 runs 31 Aug–13 Nov 2026.
+- PYP Choir (G3–G5, Malte eligible): year-long, no audition. Permission slip to Yui at the PYP Music Room by Fri 5 Sep 2026.
 - Beyond the Bell (KG-G5 childcare to 18:00) starts: Tue 25 Aug 2026.
 - Parent ID lanyards distributed at Hopes & Dreams conference (Fri 28 Aug).
 - Upper School students receive a school tote bag; no other bag permitted on campus.
