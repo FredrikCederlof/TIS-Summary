@@ -2,6 +2,14 @@
 
 Log of choices made and why.
 
+## 2026-08-21 — Sunday cloud run sent via Resend (Gmail search + portal)
+
+Gmail MCP was registered this run. Inbox (14 days, including trash) plus portal HTTP login and the public parent calendar filled `email/weekly-briefing.html` for **24–30 Aug 2026**. Latest TIS Times still 17 Jun 2026. `RESEND_API_KEY` and `RESEND_FROM` were injected even though `cursor-cloud` `environment-info` reported `environment: null`.
+
+**Decision:** send HTML via `scripts/resend_briefing.py` only (not Gmail MCP). Always CC `sternersofia@gmail.com`. The script now accepts repeated `--cc` / `--to` and sends Cloudflare a `User-Agent`.
+
+---
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.
