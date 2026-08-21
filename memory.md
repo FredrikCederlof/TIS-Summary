@@ -31,7 +31,7 @@ Notes:
 - **Car:** no on-campus drop-off/pick-up. Use Times Parking **TAKANAWA GATEWAY CITY P2** (expected); 30-minute free ticket from the school office. Do not park on the street.
 - **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
 - **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
-- **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
+- **Latest TIS Times as of 21 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
 
 ## School hours (from Aug 25, 2026)
 
@@ -76,7 +76,8 @@ Notes:
 - CCA Season 1 sign-up: opens 20 Aug 15:00, closes 25 Aug 15:00 (preference-based, not first-come).
 - CCA Season 1 activities start: Mon 31 Aug 2026.
 - Beyond the Bell (KG-G5 childcare to 18:00) starts: Tue 25 Aug 2026.
-- Parent ID lanyards distributed at Hopes & Dreams conference (Fri 28 Aug).
+- Parent ID lanyards distributed at Hopes & Dreams conference (Fri 28 Aug). The parent calendar also marks Fri 28 Aug as **No Number Day**.
+- CCA Season 1 allocation results: no later than Fri 28 Aug (Toddle, 20 Aug). Outside-provider classes (Aikido, Ballet, etc.) are first-come; TIS-led CCAs are preference-based.
 - Upper School students receive a school tote bag; no other bag permitted on campus.
 - Dress code: no uniform, but policy applies. See Community Handbook.
 - Lunch: bring nut-free food, or order via Kiwi Kitchen (create account, state grade + A/B for first order).

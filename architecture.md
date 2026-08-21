@@ -72,6 +72,7 @@ One Cursor secret. No Google OAuth.
 2. Add `RESEND_API_KEY` as a **Runtime Secret** at https://cursor.com/dashboard/cloud-agents
 3. Optional: verify a domain at https://resend.com/domains and set `RESEND_FROM` to `TIS Week <you@that-domain>`. Until then the script uses Resend’s onboarding sender `beth.t@example.com` (fine for sending to `kotolynski@gmail.com` while testing).
 4. Start a **new** cloud/automation run. This VM does not pick up secrets after boot.
+5. Resend POSTs must send `User-Agent: TIS-Summary-resend/1.0`. Cloudflare returns 1010 if the default Python UA is used.
 
 ## Gmail API secrets (optional search + send)
 
