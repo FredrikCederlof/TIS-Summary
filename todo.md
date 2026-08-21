@@ -7,11 +7,13 @@ Next steps. Move done items to decisions.md or delete them.
 - [ ] **Add Resend Cloud secret** — `RESEND_API_KEY` (Runtime Secret) at https://cursor.com/dashboard/cloud-agents then re-run Sunday. Optional `RESEND_FROM` after domain verify. This is the intended cloud send path.
 - [ ] **Add Gmail API Cloud secrets** (optional) — only if inbox search from cloud is needed. `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, `GMAIL_REFRESH_TOKEN`.
 - [ ] **Decide whether the email replaces `TIS-Summary-print.html`** — `email/weekly-briefing.html` now covers the same content and also prints cleanly. The old print sheet uses CSS Grid/Flexbox and is not email-safe. Delete it once confirmed.
-- [ ] **Confirm Eldor's and Malte's class placements** — Toddle opens Fri 21 Aug. Run `/tis-week` after that date to capture placements in the next canvas.
+- [x] **Confirm Eldor's and Malte's class placements** — Toddle 21 Aug 2026: Eldor 6B (Chrissy Erwin, 112), Malte 3B (Jared Barnes, 216), Vega-Lo KA (Claudia Ackermann + Laura, 202).
 - [ ] **Verify bus situation** — Bus requests were removed from re-enrolment (March 2026). Confirm if bus is still needed for any child.
 - [ ] **Kiwi Kitchen account** — Create account before Tue 25 Aug if using school lunch. Mention grade + A or B for first order.
 - [ ] **Update memory.md with House Team colours** — Assigned in first full week of school (week of 25 Aug). Add once known.
-- [ ] **Update memory.md with class teachers** — Available on Toddle from Fri 21 Aug.
+- [x] **Update memory.md with class teachers** — Eldor: Chrissy Erwin; Malte: Jared Barnes; Vega-Lo: Claudia Ackermann + Laura.
+- [ ] **Hopes & Dreams forms** — Complete three Google Forms and bring copies Fri 28 Aug (Malte 08:15, Vega-Lo 08:45, Eldor 09:15).
+- [ ] **PYP Choir for Malte** — Permission slip to Yui, PYP Music Room 1st floor, by Fri 5 Sep if he wants to join.
 - [ ] **SchoolsBuddy CCA allocation result** — Check before Mon 31 Aug and note which activities each child was allocated.
 
 ## Done

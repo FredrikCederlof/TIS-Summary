@@ -49,7 +49,30 @@ def _from_addr() -> str:
     return os.environ.get("RESEND_FROM", "").strip() or DEFAULT_FROM
 
 
-def build_payload(*, to: str, subject: str, html: str, body: str, asset_dir: Path) -> dict:
+def _dedupe(addrs: list[str]) -> list[str]:
+    seen: set[str] = set()
+    out: list[str] = []
+    for raw in addrs:
+        addr = (raw or "").strip()
+        if not addr:
+            continue
+        key = addr.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(addr)
+    return out
+
+
+def build_payload(
+    *,
+    to: list[str],
+    cc: list[str],
+    subject: str,
+    html: str,
+    body: str,
+    asset_dir: Path,
+) -> dict:
     attachments = []
     for name in AVATAR_FILES:
         path = asset_dir / name
@@ -62,14 +85,20 @@ def build_payload(*, to: str, subject: str, html: str, body: str, asset_dir: Pat
                 "content_id": name,
             }
         )
-    return {
+    payload = {
         "from": _from_addr(),
-        "to": [to],
+        "to": _dedupe(to),
         "subject": subject,
         "html": rewrite_html_cids(html),
         "text": body,
         "attachments": attachments,
     }
+    cc_list = _dedupe(cc)
+    if cc_list:
+        payload["cc"] = cc_list
+    if not payload["to"]:
+        sys.exit("Refusing to send: no --to recipients.")
+    return payload
 
 
 def cmd_check(_: argparse.Namespace) -> None:
@@ -85,7 +114,8 @@ def cmd_send(args: argparse.Namespace) -> None:
     if "<!DOCTYPE html" not in html[:200] and "<html" not in html[:400].lower():
         sys.exit("Refusing to send: html file is not a full HTML document.")
     payload = build_payload(
-        to=args.to,
+        to=args.to or [DEFAULT_TO],
+        cc=args.cc or [],
         subject=args.subject,
         html=html,
         body=args.body,
@@ -95,6 +125,7 @@ def cmd_send(args: argparse.Namespace) -> None:
         preview = {
             "from": payload["from"],
             "to": payload["to"],
+            "cc": payload.get("cc", []),
             "subject": payload["subject"],
             "text": payload["text"],
             "html_has_cid": "cid:avatar-eldor.png" in payload["html"],
@@ -113,6 +144,7 @@ def cmd_send(args: argparse.Namespace) -> None:
         headers={
             "Authorization": f"Bearer {_api_key()}",
             "Content-Type": "application/json",
+            "User-Agent": "TIS-Summary-resend/1.0",
         },
     )
     try:
@@ -121,7 +153,18 @@ def cmd_send(args: argparse.Namespace) -> None:
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode(errors="replace")[:800]
         sys.exit(f"Resend send failed ({exc.code}): {detail}")
-    print(json.dumps({"sent": True, **result, "to": args.to, "subject": args.subject}, indent=2))
+    print(
+        json.dumps(
+            {
+                "sent": True,
+                **result,
+                "to": payload["to"],
+                "cc": payload.get("cc", []),
+                "subject": args.subject,
+            },
+            indent=2,
+        )
+    )
 
 
 def main() -> None:
@@ -129,7 +172,16 @@ def main() -> None:
     sub = parser.add_subparsers(dest="cmd", required=True)
     sub.add_parser("check", help="Verify RESEND_API_KEY exists")
     send_p = sub.add_parser("send", help="Send the filled weekly-briefing HTML")
-    send_p.add_argument("--to", default=DEFAULT_TO)
+    send_p.add_argument(
+        "--to",
+        action="append",
+        help="Recipient. Repeatable. Defaults to kotolynski@gmail.com.",
+    )
+    send_p.add_argument(
+        "--cc",
+        action="append",
+        help="CC recipient. Repeatable. Always include sternersofia@gmail.com on Sunday.",
+    )
     send_p.add_argument("--subject", required=True)
     send_p.add_argument("--html", default=str(DEFAULT_HTML))
     send_p.add_argument("--body", required=True)
