@@ -10,6 +10,8 @@ Coming week is still **24–30 Aug 2026** (Opening Day Mon 24, first school day 
 
 **Send path:** Resend only, with CC to `sternersofia@gmail.com`. Script now accepts repeated `--to` / `--cc` and sends `User-Agent: TIS-Summary-resend/1.0` so Cloudflare does not 1010 the POST. Do not fall back to Gmail send.
 
+**Sent:** Resend id `264888f1-7e3e-4663-b8db-7e57ae61bf16` to kotolynski@gmail.com, CC sternersofia@gmail.com, subject `TIS Week · 24–30 Aug 2026`.
+
 ---
 
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
