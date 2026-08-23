@@ -2,6 +2,16 @@
 
 Log of choices made and why.
 
+## 2026-08-23 — Sunday briefing filled from Gmail + portal, sent via Resend
+
+Coming week is still **24–30 Aug 2026** (Opening Day Mon 24, first school day Tue 25). This run found Gmail MCP registered, searched the last 14 days including trash, and logged into the parent portal (skip honeypot). Latest TIS Times remains 17 Jun 2026.
+
+**New facts used in the HTML:** class placements and Hopes & Dreams slots from Toddle 21 Aug; Dan Reynolds’ 21 Aug Opening Ceremony addendum (doors close 09:00 sharp, phones off, Route 15 taxi, P2 coffee voucher); CCA already open and closes Tue 25 15:00; PYP Choir optional for Malte by 5 Sep; Guest Wi-Fi `TIS Guest`.
+
+**Send path:** Resend only, with CC to `sternersofia@gmail.com`. Script now accepts repeated `--to` / `--cc` and sends `User-Agent: TIS-Summary-resend/1.0` so Cloudflare does not 1010 the POST. Do not fall back to Gmail send.
+
+---
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.

@@ -41,7 +41,7 @@ How the system is built.
 4. Agent deduplicates 3-child mail, extracts events + actions for the coming week.
 5. Agent overwrites `email/weekly-briefing.html` with this week's data (same MD3 table layout).
 6. Agent overwrites `TIS-Summary.canvas.tsx` when a canvas workspace is available.
-7. On Sunday (or when asked to send): Gmail MCP `send_message` if available, else `scripts/resend_briefing.py send`, else `scripts/gmail_briefing.py send`. HTML plus inline avatar CIDs. A short chat recap is the run log, not the email.
+7. On Sunday (or when asked to send): `scripts/resend_briefing.py send` with `--to kotolynski@gmail.com --cc sternersofia@gmail.com`. HTML plus inline avatar CIDs. A short chat recap is the run log, not the email. Gmail MCP is for search; do not use it to send the Sunday briefing when Resend is configured.
 
 ## Trigger paths
 
