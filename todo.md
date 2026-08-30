@@ -7,15 +7,17 @@ Next steps. Move done items to decisions.md or delete them.
 - [ ] **Add Resend Cloud secret** — `RESEND_API_KEY` (Runtime Secret) at https://cursor.com/dashboard/cloud-agents then re-run Sunday. Optional `RESEND_FROM` after domain verify. This is the intended cloud send path.
 - [ ] **Add Gmail API Cloud secrets** (optional) — only if inbox search from cloud is needed. `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, `GMAIL_REFRESH_TOKEN`.
 - [ ] **Decide whether the email replaces `TIS-Summary-print.html`** — `email/weekly-briefing.html` now covers the same content and also prints cleanly. The old print sheet uses CSS Grid/Flexbox and is not email-safe. Delete it once confirmed.
-- [ ] **Confirm Eldor's and Malte's class placements** — Toddle opens Fri 21 Aug. Run `/tis-week` after that date to capture placements in the next canvas.
-- [ ] **Verify bus situation** — Bus requests were removed from re-enrolment (March 2026). Confirm if bus is still needed for any child.
-- [ ] **Kiwi Kitchen account** — Create account before Tue 25 Aug if using school lunch. Mention grade + A or B for first order.
-- [ ] **Update memory.md with House Team colours** — Assigned in first full week of school (week of 25 Aug). Add once known.
-- [ ] **Update memory.md with class teachers** — Available on Toddle from Fri 21 Aug.
-- [ ] **SchoolsBuddy CCA allocation result** — Check before Mon 31 Aug and note which activities each child was allocated.
+- [ ] **Verify bus situation** — Bus requests were removed from re-enrolment (March 2026). Eldor now has a CCA soccer bus at 15:25 Mon/Wed; still confirm morning/afternoon home bus if needed.
+- [ ] **Kiwi Kitchen account** — Still useful if using school lunch. Mention grade + A or B for first order.
+- [ ] **Update memory.md with House Team colours** — Not in mail as of 30 Aug. Add once known.
+- [ ] **Eldor Japanese placement review** — School will finalise after the first two weeks (~week of 7 Sep). Watch for Yuki / Emi / Chika.
+- [ ] **PYP Choir for Malte** — Signed slip to Yui, PYP Music Room 1st floor, by Fri 4 Sep if he is joining.
 
 ## Done
 
+- [x] Class placements captured (21 Aug): Eldor 6B / Malte 3B / Vega-Lo KA
+- [x] Class teachers captured: Chrissy Erwin, Jared Barnes, Claudia Ackermann + Laura
+- [x] SchoolsBuddy CCA Season 1 allocations captured (28 Aug)
 - [x] Gmail MCP connected and tested (Aug 2026)
 - [x] Skill created at `~/.cursor/skills/tis-weekly-briefing/SKILL.md`
 - [x] Command `/tis-week` created at `~/.cursor/commands/tis-week.md`
