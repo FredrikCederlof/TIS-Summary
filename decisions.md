@@ -2,6 +2,12 @@
 
 Log of choices made and why.
 
+## 2026-08-30 — Week 31 Aug–6 Sep briefing
+
+Filled `email/weekly-briefing.html` from Gmail MCP (last 14 days, including trash) plus TIS Times 27 Aug. Coming week is the first CCA week. LS Back to School Night is **Thu 3 Sep 18:00** (teacher mail + TIS Times coming-up list); the Times body text “Thu 5 Sep” is a Saturday and was discarded. Choir letter “Friday 5 Sep” is also a Saturday — treat as Fri 4 Sep. Send via Resend with CC to sternersofia@gmail.com. `scripts/resend_briefing.py` accepts repeated `--to` / `--cc` and sends `User-Agent: TIS-Summary-resend/1.0`.
+
+---
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.

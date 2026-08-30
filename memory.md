@@ -19,6 +19,12 @@ Permanent knowledge. Update when new facts are confirmed. Never delete; mark out
 
 Notes:
 - Eldor is EAL-monitored in G6 — no extra lessons, in-class support only (confirmed Tomomi Mizuno, Jun 2026).
+- Placements (Toddle 21 Aug): Eldor **6B** Chrissy Erwin room 112; Malte **3B** Jared Barnes (+ Sarah) room 216; Vega-Lo **KA** Claudia Ackermann + Laura room 202.
+- CCA Season 1 (31 Aug–13 Nov, SchoolsBuddy 28 Aug): Eldor KPASS MS Boys Soccer Mon & Wed 15:30–16:30 Field + Fri 07:00–08:00 Field (Van Den Bossche); Malte G3–5 Basketball Thu 15:30–16:30 Gym (Griffin); Vega-Lo K–G2 Tinker Lab Fri 15:30–16:30 room 220 (Chau). After-school first session: meet in the gym. MS soccer bus 15:25 at the main entrance. Do not arrive before 06:50 for morning sessions.
+- Eldor 6B aquatics: Wed 13:40–15:20. Kit: swim cap, goggles, athletic jammer, bag (Chris Brodie, 26 Aug).
+- Eldor Japanese: provisional beginners-class placement; first two weeks are observation; review before final (Yuki Hikage / Emi Morishige / Chika Mito, 28 Aug).
+- Lower School Back to School Night: **Thu 3 Sep 18:00** (Jared 28 Aug + TIS Times coming-up list). TIS Times body text wrongly said “Thu 5 Sep” (that date is a Saturday).
+- Upper School Back to School Night: **Thu 10 Sep**.
 - Siblings will be placed in the same House.
 - Bus requests for Eldor and Malte were removed from re-enrolment forms (March 2026, Sofia's note). Re-confirm if bus is needed.
 
@@ -31,7 +37,12 @@ Notes:
 - **Car:** no on-campus drop-off/pick-up. Use Times Parking **TAKANAWA GATEWAY CITY P2** (expected); 30-minute free ticket from the school office. Do not park on the street.
 - **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
 - **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
-- **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
+- **Latest TIS Times as of 30 Aug 2026:** 27 Aug 2026, now a Google Doc: https://docs.google.com/document/d/13c_4NqkrNjjKgWs5zr0EXgbcFlFtkJP26XGALPQRqYc/edit
+- **Doors:** main and bicycle doors 08:00–08:15 and 15:15–15:40. Outside those windows use the main-entrance intercom. Back door is not opened for safety.
+- **Drop-off:** no parking on the approach or small road. Taxi on Route 15. Times Parking P2 with a 30-minute office ticket.
+- **Pickup:** Lower School afternoon parent pickup at the back bicycle door (awning + seating). Morning drop-off at the front entrance.
+- **Hats & bottles:** sun hat every day; water bottle ideally 1 L; KG–G2 bottles need a strap for the stairs.
+- **Lunch:** durable zipped bag or box, plus cutlery. Café stores several grades together.
 
 ## School hours (from Aug 25, 2026)
 
@@ -64,6 +75,14 @@ Notes:
 | Makoto | Activities Director (CCA) | makotoko@tokyois.com |
 | Jen (IT) | SchoolsBuddy / Toddle IT | jench@tokyois.com |
 | Tomomi Mizuno | Support Teacher (EAL / Eldor) | tomomimi@tokyois.com |
+| Chrissy Erwin | Eldor homeroom 6B, room 112 | (Toddle) |
+| Jared Barnes | Malte homeroom 3B, room 216 | jaredba@tokyois.com |
+| Claudia Ackermann | Vega-Lo homeroom KA, room 202 | (Toddle) |
+| Yuki Hikage | LS Japanese | yukihi@tokyois.com |
+| Emi Morishige | Japanese | emimo@tokyois.com |
+| Chika Mito | Japanese | chikami@tokyois.com |
+| Chris Brodie | MYP Coordinator / aquatics | chrisbr@tokyois.com |
+| Yui Narita | PYP Music / Choir | (Toddle / PYP Music Room) |
 | Daniel Reynolds | Head of School | danielre@tokyois.com |
 | Patricia G. | Eldor's previous teacher | patriciago@tokyois.com |
 | TFC coordinator | WhatsApp / buddy matching | tfc_coordinator@tokyois.com |
