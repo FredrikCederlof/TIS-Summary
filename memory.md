@@ -7,7 +7,7 @@ Permanent knowledge. Update when new facts are confirmed. Never delete; mark out
 | Person | Role | Email |
 |---|---|---|
 | Fredrik Sterner Cederlöf | Parent (primary) | kotolynski@gmail.com |
-| Sofia Sterner Cederlöf | Parent (partner) | sofia.sterner@volvocars.com |
+| Sofia Sterner Cederlöf | Parent (partner) | sternersofia@gmail.com (briefing CC); sofia.sterner@volvocars.com |
 
 ## Children
 
@@ -31,7 +31,12 @@ Notes:
 - **Car:** no on-campus drop-off/pick-up. Use Times Parking **TAKANAWA GATEWAY CITY P2** (expected); 30-minute free ticket from the school office. Do not park on the street.
 - **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
 - **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
-- **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
+- **Latest TIS Times as of 6 Sep 2026:** 3 Sep 2026 (Toddle). Previous: 27 Aug 2026 Google Doc https://docs.google.com/document/d/13c_4NqkrNjjKgWs5zr0EXgbcFlFtkJP26XGALPQRqYc/edit
+- **Placements (Toddle 21 Aug):** Eldor 6B Chrissy Erwin room 112; Malte 3B Jared Barnes + Sarah room 216; Vega-Lo KA Claudia Ackermann + Laura room 202.
+- **CCA Season 1 (31 Aug–13 Nov):** Eldor MS Boys Soccer Mon/Wed 15:30 (Wed off campus, return ~17:45) + Fri 07:00 listed on SchoolsBuddy (1 Sep coach note: no morning practices); Malte Basketball Thu 15:30 Gym; Vega-Lo Tinker Lab Fri 15:30 room 220.
+- **Eldor 6B swim:** Wed 13:40–15:20. Cap, goggles, athletic jammer, bag. Towels supplied (Chris Brodie, 30 Aug).
+- **Campus access:** back door 08:00 and 15:15–15:30; front door for early CCA and after 16:30. LS pickup at the back bicycle door.
+- **Japanese (Eldor):** still provisional as of 31 Aug (Akiko Taira). First-two-weeks review may close this week of 7 Sep.
 
 ## School hours (from Aug 25, 2026)
 

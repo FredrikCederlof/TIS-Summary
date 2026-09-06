@@ -9,6 +9,9 @@ Preferred cloud send path: one Cursor secret, no Google OAuth.
                      set e.g. TIS Week <briefing@insightworks.se>
 
 Does not search Gmail. Portal + memory still fill the template.
+
+Accepts repeated --to / --cc. POSTs send User-Agent so Cloudflare does not
+block the request (1010).
 """
 
 from __future__ import annotations
@@ -33,6 +36,7 @@ from gmail_briefing import (  # noqa: E402
 
 RESEND_URL = "https://api.resend.com/emails"
 DEFAULT_FROM = "TIS Week <beth.t@example.com>"
+USER_AGENT = "TIS-Summary-resend/1.0"
 
 
 def _api_key() -> str:
@@ -49,7 +53,26 @@ def _from_addr() -> str:
     return os.environ.get("RESEND_FROM", "").strip() or DEFAULT_FROM
 
 
-def build_payload(*, to: str, subject: str, html: str, body: str, asset_dir: Path) -> dict:
+def _unique_addrs(values: list[str] | None, fallback: str | None = None) -> list[str]:
+    seen: list[str] = []
+    for raw in values or []:
+        addr = (raw or "").strip()
+        if addr and addr not in seen:
+            seen.append(addr)
+    if not seen and fallback:
+        seen.append(fallback)
+    return seen
+
+
+def build_payload(
+    *,
+    to: list[str],
+    cc: list[str],
+    subject: str,
+    html: str,
+    body: str,
+    asset_dir: Path,
+) -> dict:
     attachments = []
     for name in AVATAR_FILES:
         path = asset_dir / name
@@ -62,14 +85,17 @@ def build_payload(*, to: str, subject: str, html: str, body: str, asset_dir: Pat
                 "content_id": name,
             }
         )
-    return {
+    payload = {
         "from": _from_addr(),
-        "to": [to],
+        "to": to,
         "subject": subject,
         "html": rewrite_html_cids(html),
         "text": body,
         "attachments": attachments,
     }
+    if cc:
+        payload["cc"] = cc
+    return payload
 
 
 def cmd_check(_: argparse.Namespace) -> None:
@@ -84,8 +110,11 @@ def cmd_send(args: argparse.Namespace) -> None:
     html = html_path.read_text(encoding="utf-8")
     if "<!DOCTYPE html" not in html[:200] and "<html" not in html[:400].lower():
         sys.exit("Refusing to send: html file is not a full HTML document.")
+    to = _unique_addrs(args.to, DEFAULT_TO)
+    cc = _unique_addrs(args.cc)
     payload = build_payload(
-        to=args.to,
+        to=to,
+        cc=cc,
         subject=args.subject,
         html=html,
         body=args.body,
@@ -95,6 +124,7 @@ def cmd_send(args: argparse.Namespace) -> None:
         preview = {
             "from": payload["from"],
             "to": payload["to"],
+            "cc": payload.get("cc", []),
             "subject": payload["subject"],
             "text": payload["text"],
             "html_has_cid": "cid:avatar-eldor.png" in payload["html"],
@@ -113,6 +143,7 @@ def cmd_send(args: argparse.Namespace) -> None:
         headers={
             "Authorization": f"Bearer {_api_key()}",
             "Content-Type": "application/json",
+            "User-Agent": USER_AGENT,
         },
     )
     try:
@@ -121,7 +152,12 @@ def cmd_send(args: argparse.Namespace) -> None:
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode(errors="replace")[:800]
         sys.exit(f"Resend send failed ({exc.code}): {detail}")
-    print(json.dumps({"sent": True, **result, "to": args.to, "subject": args.subject}, indent=2))
+    print(
+        json.dumps(
+            {"sent": True, **result, "to": to, "cc": cc, "subject": args.subject},
+            indent=2,
+        )
+    )
 
 
 def main() -> None:
@@ -129,7 +165,8 @@ def main() -> None:
     sub = parser.add_subparsers(dest="cmd", required=True)
     sub.add_parser("check", help="Verify RESEND_API_KEY exists")
     send_p = sub.add_parser("send", help="Send the filled weekly-briefing HTML")
-    send_p.add_argument("--to", default=DEFAULT_TO)
+    send_p.add_argument("--to", action="append", default=None)
+    send_p.add_argument("--cc", action="append", default=None)
     send_p.add_argument("--subject", required=True)
     send_p.add_argument("--html", default=str(DEFAULT_HTML))
     send_p.add_argument("--body", required=True)
