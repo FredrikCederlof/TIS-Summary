@@ -2,6 +2,10 @@
 
 Log of choices made and why.
 
+## 2026-09-06 — Sunday send used Gmail search + Resend CC
+
+Gmail MCP was registered this run and searched the last 14 days (including trash). Campus closure for Mon 7 Sep arrived the same afternoon from Dan Reynolds (Toddle) and Makoto (SchoolsBuddy). Portal HTTP login fields `username-38` / `form_id` were not on the landing page; inbox + memory were enough to fill the template. `scripts/resend_briefing.py` on main still lacked `--cc` and the Cloudflare User-Agent that previous successful sends used, so both were restored before send. Filled HTML for **7–13 Sep 2026**. Sent via Resend to kotolynski@gmail.com, CC sternersofia@gmail.com, id `fe24a81a-2806-4ab5-b951-a0e76fbd3bcb`.
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.
