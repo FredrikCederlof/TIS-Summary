@@ -2,6 +2,16 @@
 
 Log of choices made and why.
 
+## 2026-09-13 — Sunday send for week 14–20 Sep
+
+Gmail MCP was registered. Deduped Toddle (TIS Times 10 Sep, G3 News 11 Sep, 6B SMART Goals, KA Homeroom News, late-bus rename) plus SchoolsBuddy. Portal landing page had no Ultimate Member login fields; Gmail was enough.
+
+**Decision:** fill `email/weekly-briefing.html` for 14–20 Sep and send via Resend to kotolynski@gmail.com with CC sternersofia@gmail.com. Restore `--cc` / repeated `--to` and the Resend User-Agent on `scripts/resend_briefing.py` (main had lost them again). Lead items: Eldor SMART goal tonight; MAP this week; KA family/baby photos due Fri 18 Sep.
+
+**Send id:** `a7c43d00-0605-48dd-9bc7-a5129d931447`.
+
+---
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.

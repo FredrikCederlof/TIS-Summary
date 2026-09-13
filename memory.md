@@ -7,7 +7,7 @@ Permanent knowledge. Update when new facts are confirmed. Never delete; mark out
 | Person | Role | Email |
 |---|---|---|
 | Fredrik Sterner Cederlöf | Parent (primary) | kotolynski@gmail.com |
-| Sofia Sterner Cederlöf | Parent (partner) | sofia.sterner@volvocars.com |
+| Sofia Sterner Cederlöf | Parent (partner) | sofia.sterner@volvocars.com; briefing CC: sternersofia@gmail.com |
 
 ## Children
 
@@ -21,6 +21,14 @@ Notes:
 - Eldor is EAL-monitored in G6 — no extra lessons, in-class support only (confirmed Tomomi Mizuno, Jun 2026).
 - Siblings will be placed in the same House.
 - Bus requests for Eldor and Malte were removed from re-enrolment forms (March 2026, Sofia's note). Re-confirm if bus is needed.
+- Placements (Toddle 21 Aug 2026): Eldor 6B Chrissy Erwin room 112; Malte 3B Jared Barnes + Sarah room 216; Vega-Lo KA Claudia Ackermann + Laura room 202.
+- CCA Season 1 (31 Aug–13 Nov): Eldor MS Boys Soccer Mon/Wed 15:30 (Wed off campus, return ~17:45); Malte Basketball Thu 15:30 gym; Vega-Lo Tinker Lab Fri 15:30 room 220. Coach note 1 Sep: no Friday morning soccer.
+- Eldor 6B swim Wed 13:40–15:20. Towels supplied (Chris Brodie, 30 Aug).
+- Eldor Japanese placement still provisional as of 31 Aug (Akiko Taira). No follow-up mail in the 14 days to 13 Sep.
+- Eldor excused Fri 11 Sep (cough/cold). Vega-Lo excused Thu 3 and Fri 4 Sep (fever/nausea).
+- Late buses renamed 9 Sep (Nana Imamura): Late Bus A → Late Bus (16:45); Late Bus B → BtB Bus (18:00 / 18:05). Ignore “Vectare Transportation” schedule slots.
+- KA Family Wall: family photo + baby photo due Fri 18 Sep 2026 (Claudia & Laura). Sound Waves Firefly class code `quit135`.
+- Doors: back 08:00 and 15:15–15:30; front for early CCA and after 16:30. LS pickup at back bicycle door.
 
 ## School
 
@@ -31,7 +39,7 @@ Notes:
 - **Car:** no on-campus drop-off/pick-up. Use Times Parking **TAKANAWA GATEWAY CITY P2** (expected); 30-minute free ticket from the school office. Do not park on the street.
 - **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
 - **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
-- **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
+- **Latest TIS Times as of 13 Sep 2026:** 10 Sep 2026 (Toddle). Parent communications have moved to Toddle; portal still exists but TIS Times is Thursday via Toddle.
 
 ## School hours (from Aug 25, 2026)
 
