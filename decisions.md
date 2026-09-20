@@ -2,6 +2,17 @@
 
 Log of choices made and why.
 
+## 2026-09-20 — Sunday briefing for 21–27 Sep sent via Resend
+
+Gmail MCP was registered. Searched last 14 days including trash (tokyois.com, Toddle, SchoolsBuddy; no OpenApply / ManageBac / Seesaw hits). Deduped whole-school Toddle mail. Portal landing page again had no `username-38` / nonce; Gmail + public calendar were enough.
+
+**Week facts:** no school Mon 21 (Respect for the Aged Day) or Tue 22 (PD). TIS is **open Wed 23** despite Japan’s Autumnal Equinox. G6–8 Explorations parent session Wed 23 08:30 Cafe. Eldor soccer away ASIJ back ~18:00. Creative Dress Day Fri 25 + ¥100. Latest TIS Times 17 Sep 2026.
+
+**Decision:** restore repeated `--to` / `--cc` and `User-Agent: TIS-Summary-resend/1.0` on `scripts/resend_briefing.py` (main had dropped them again). Send HTML only.
+
+---
+
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.

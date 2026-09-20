@@ -4,15 +4,11 @@ Next steps. Move done items to decisions.md or delete them.
 
 ## Open
 
-- [ ] **Add Resend Cloud secret** — `RESEND_API_KEY` (Runtime Secret) at https://cursor.com/dashboard/cloud-agents then re-run Sunday. Optional `RESEND_FROM` after domain verify. This is the intended cloud send path.
-- [ ] **Add Gmail API Cloud secrets** (optional) — only if inbox search from cloud is needed. `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, `GMAIL_REFRESH_TOKEN`.
-- [ ] **Decide whether the email replaces `TIS-Summary-print.html`** — `email/weekly-briefing.html` now covers the same content and also prints cleanly. The old print sheet uses CSS Grid/Flexbox and is not email-safe. Delete it once confirmed.
-- [ ] **Confirm Eldor's and Malte's class placements** — Toddle opens Fri 21 Aug. Run `/tis-week` after that date to capture placements in the next canvas.
+- [ ] **Add House Team colour names to memory.md** — sheet published 16 Sep (Makoto). Need the three children’s colour once opened in a logged-in browser.
 - [ ] **Verify bus situation** — Bus requests were removed from re-enrolment (March 2026). Confirm if bus is still needed for any child.
-- [ ] **Kiwi Kitchen account** — Create account before Tue 25 Aug if using school lunch. Mention grade + A or B for first order.
-- [ ] **Update memory.md with House Team colours** — Assigned in first full week of school (week of 25 Aug). Add once known.
-- [ ] **Update memory.md with class teachers** — Available on Toddle from Fri 21 Aug.
-- [ ] **SchoolsBuddy CCA allocation result** — Check before Mon 31 Aug and note which activities each child was allocated.
+- [ ] **Decide whether the email replaces `TIS-Summary-print.html`** — `email/weekly-briefing.html` now covers the same content and also prints cleanly.
+- [ ] **School Talk Tue 29 Sep 08:30 Cafe 1F** — Dan, Michelle, Robert. Optional questions sheet is in TIS Times 17 Sep.
+- [ ] **G6–8 Explorations packing** — trip is 12–15 Oct after the 23 Sep Cafe briefing.
 
 ## Done
 
@@ -30,3 +26,7 @@ Next steps. Move done items to decisions.md or delete them.
 - [x] Sunday automation prompt now names the HTML template (20 Aug 2026) — send still blocked until Gmail MCP attaches in cloud
 - [x] Gmail API fallback scripts (`scripts/gmail_briefing.py`, `gmail_oauth_setup.py`) (20 Aug 2026)
 - [x] Resend send script (`scripts/resend_briefing.py`) as preferred cloud path (20 Aug 2026)
+- [x] Class placements captured: Eldor 6B / Malte 3B / Vega-Lo KA (21 Aug 2026)
+- [x] CCA Season 1 allocations noted (28–31 Aug 2026)
+- [x] Eldor Japanese placement confirmed Emergent 1 / Chika Mito (18 Sep 2026)
+- [x] Sunday cloud send via Resend with CC Sofia (21 Aug, 23 Aug, 30 Aug, 6 Sep, 13 Sep, 20 Sep 2026)
