@@ -2,6 +2,16 @@
 
 Log of choices made and why.
 
+## 2026-09-27 — Week 28 Sep–4 Oct filled from Gmail + Toddle
+
+Sunday cloud run had Gmail MCP. Searched last 14 days including trash. Deduplicated Toddle copies. Parent Portal landing page now says all information is in Toddle (no `username-38` form). Public parent calendar confirmed Day 4–2 for 28 Sep–2 Oct; School Talk is in TIS Times 24 Sep, not on the calendar embed.
+
+**This week's hard items:** School Talk Tue 29 Sep 08:30 Cafe; Vega-Lo family/baby photos; school photo order forms; optional Toddle support Fri 2 Oct 08:30 Dai Building. Eldor pool dismissal starts this week.
+
+**Send path:** Resend only, `--to kotolynski@gmail.com --cc sternersofia@gmail.com`. Restored repeated `--to` / `--cc` and `User-Agent: TIS-Summary-resend/1.0` on `scripts/resend_briefing.py` (those flags had dropped from main again).
+
+---
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.

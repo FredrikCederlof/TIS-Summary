@@ -7,7 +7,7 @@ Permanent knowledge. Update when new facts are confirmed. Never delete; mark out
 | Person | Role | Email |
 |---|---|---|
 | Fredrik Sterner Cederlöf | Parent (primary) | kotolynski@gmail.com |
-| Sofia Sterner Cederlöf | Parent (partner) | sofia.sterner@volvocars.com |
+| Sofia Sterner Cederlöf | Parent (partner) | sternersofia@gmail.com · sofia.sterner@volvocars.com |
 
 ## Children
 
@@ -19,7 +19,11 @@ Permanent knowledge. Update when new facts are confirmed. Never delete; mark out
 
 Notes:
 - Eldor is EAL-monitored in G6 — no extra lessons, in-class support only (confirmed Tomomi Mizuno, Jun 2026).
-- Siblings will be placed in the same House.
+- Placements (Toddle 21 Aug): Eldor 6B Chrissy Erwin room 112; Malte 3B Jared Barnes + Sarah room 216; Vega-Lo KA Claudia Ackermann + Laura room 202.
+- Eldor Japanese: Emergent 1 with Chika Mito — confirmed 10–18 Sep 2026 after the trial. Katakana starts after hiragana shapes.
+- CCA Season 1 (31 Aug–13 Nov): Eldor MS Boys Soccer Mon/Wed 15:30 (Wed often off campus); Malte Basketball Thu 15:30 gym; Vega-Lo Tinker Lab Fri 15:30 room 220.
+- Eldor 6B swim Wed 13:40–15:20. From week of 28 Sep, last-two-period swim dismisses from the pool (Chris Brodie, 25 Sep).
+- Siblings will be placed in the same House. G3 house list circulated 25 Sep (screenshot); colours not extracted. Sheet: https://docs.google.com/spreadsheets/d/1UsSbvpjofKz9EEDILPMJqLpC0psA0Pg6Ed89f3pn1rk/edit
 - Bus requests for Eldor and Malte were removed from re-enrolment forms (March 2026, Sofia's note). Re-confirm if bus is needed.
 
 ## School
@@ -31,7 +35,8 @@ Notes:
 - **Car:** no on-campus drop-off/pick-up. Use Times Parking **TAKANAWA GATEWAY CITY P2** (expected); 30-minute free ticket from the school office. Do not park on the street.
 - **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
 - **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
-- **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
+- **Latest TIS Times as of 27 Sep 2026:** 24 Sep 2026 (Toddle). Previous: 17 Sep, 10 Sep, 3 Sep. Parent Portal now says all information is in Toddle.
+- **Guest Wi-Fi until winter break:** `81170-70630` (Thomas Gay, 22 Sep). The 18 Sep code `15096-87480` is revoked.
 
 ## School hours (from Aug 25, 2026)
 
@@ -64,6 +69,11 @@ Notes:
 | Makoto | Activities Director (CCA) | makotoko@tokyois.com |
 | Jen (IT) | SchoolsBuddy / Toddle IT | jench@tokyois.com |
 | Tomomi Mizuno | Support Teacher (EAL / Eldor) | tomomimi@tokyois.com |
+| Chika Mito | Eldor Japanese (Emergent 1) | chikami@tokyois.com |
+| Chrissy Erwin | Eldor 6B homeroom | via Toddle |
+| Jared Barnes / Sarah | Malte 3B homeroom | via Toddle |
+| Claudia Ackermann / Laura | Vega-Lo KA homeroom | via Toddle |
+| Malgosia Lundin | PYP PHE / Sports Days | malgosialu@tokyois.com |
 | Daniel Reynolds | Head of School | danielre@tokyois.com |
 | Patricia G. | Eldor's previous teacher | patriciago@tokyois.com |
 | TFC coordinator | WhatsApp / buddy matching | tfc_coordinator@tokyois.com |

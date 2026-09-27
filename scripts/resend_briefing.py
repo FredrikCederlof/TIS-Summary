@@ -33,6 +33,7 @@ from gmail_briefing import (  # noqa: E402
 
 RESEND_URL = "https://api.resend.com/emails"
 DEFAULT_FROM = "TIS Week <beth.t@example.com>"
+USER_AGENT = "TIS-Summary-resend/1.0"
 
 
 def _api_key() -> str:
@@ -49,7 +50,15 @@ def _from_addr() -> str:
     return os.environ.get("RESEND_FROM", "").strip() or DEFAULT_FROM
 
 
-def build_payload(*, to: str, subject: str, html: str, body: str, asset_dir: Path) -> dict:
+def build_payload(
+    *,
+    to: list[str],
+    cc: list[str],
+    subject: str,
+    html: str,
+    body: str,
+    asset_dir: Path,
+) -> dict:
     attachments = []
     for name in AVATAR_FILES:
         path = asset_dir / name
@@ -62,22 +71,37 @@ def build_payload(*, to: str, subject: str, html: str, body: str, asset_dir: Pat
                 "content_id": name,
             }
         )
-    return {
+    payload = {
         "from": _from_addr(),
-        "to": [to],
+        "to": to,
         "subject": subject,
         "html": rewrite_html_cids(html),
         "text": body,
         "attachments": attachments,
     }
+    if cc:
+        payload["cc"] = cc
+    return payload
 
 
 def cmd_check(_: argparse.Namespace) -> None:
     _api_key()
-    print(f"RESEND_API_KEY present; from={_from_addr()}")
+    print("RESEND_API_KEY present; from address is set (value not printed).")
 
 
 def cmd_send(args: argparse.Namespace) -> None:
+    to_addrs = [addr for addr in (args.to or []) if addr]
+    if not to_addrs:
+        to_addrs = [DEFAULT_TO]
+    # Deduplicate while preserving order (prompt may pass --to twice).
+    seen: set[str] = set()
+    unique_to: list[str] = []
+    for addr in to_addrs:
+        if addr not in seen:
+            seen.add(addr)
+            unique_to.append(addr)
+    cc_addrs = [addr for addr in (args.cc or []) if addr]
+
     html_path = Path(args.html)
     if not html_path.is_file():
         sys.exit(f"HTML template not found: {html_path}")
@@ -85,7 +109,8 @@ def cmd_send(args: argparse.Namespace) -> None:
     if "<!DOCTYPE html" not in html[:200] and "<html" not in html[:400].lower():
         sys.exit("Refusing to send: html file is not a full HTML document.")
     payload = build_payload(
-        to=args.to,
+        to=unique_to,
+        cc=cc_addrs,
         subject=args.subject,
         html=html,
         body=args.body,
@@ -93,8 +118,9 @@ def cmd_send(args: argparse.Namespace) -> None:
     )
     if args.dry_run:
         preview = {
-            "from": payload["from"],
+            "from_set": bool(_from_addr()),
             "to": payload["to"],
+            "cc": payload.get("cc", []),
             "subject": payload["subject"],
             "text": payload["text"],
             "html_has_cid": "cid:avatar-eldor.png" in payload["html"],
@@ -113,6 +139,7 @@ def cmd_send(args: argparse.Namespace) -> None:
         headers={
             "Authorization": f"Bearer {_api_key()}",
             "Content-Type": "application/json",
+            "User-Agent": USER_AGENT,
         },
     )
     try:
@@ -121,7 +148,18 @@ def cmd_send(args: argparse.Namespace) -> None:
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode(errors="replace")[:800]
         sys.exit(f"Resend send failed ({exc.code}): {detail}")
-    print(json.dumps({"sent": True, **result, "to": args.to, "subject": args.subject}, indent=2))
+    print(
+        json.dumps(
+            {
+                "sent": True,
+                **result,
+                "to": unique_to,
+                "cc": cc_addrs,
+                "subject": args.subject,
+            },
+            indent=2,
+        )
+    )
 
 
 def main() -> None:
@@ -129,7 +167,8 @@ def main() -> None:
     sub = parser.add_subparsers(dest="cmd", required=True)
     sub.add_parser("check", help="Verify RESEND_API_KEY exists")
     send_p = sub.add_parser("send", help="Send the filled weekly-briefing HTML")
-    send_p.add_argument("--to", default=DEFAULT_TO)
+    send_p.add_argument("--to", action="append", default=[])
+    send_p.add_argument("--cc", action="append", default=[])
     send_p.add_argument("--subject", required=True)
     send_p.add_argument("--html", default=str(DEFAULT_HTML))
     send_p.add_argument("--body", required=True)
