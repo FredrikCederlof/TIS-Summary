@@ -7,7 +7,7 @@ Permanent knowledge. Update when new facts are confirmed. Never delete; mark out
 | Person | Role | Email |
 |---|---|---|
 | Fredrik Sterner Cederlöf | Parent (primary) | kotolynski@gmail.com |
-| Sofia Sterner Cederlöf | Parent (partner) | sofia.sterner@volvocars.com |
+| Sofia Sterner Cederlöf | Parent (partner) | sofia.sterner@volvocars.com; Sunday briefing CC: sternersofia@gmail.com |
 
 ## Children
 
@@ -31,7 +31,7 @@ Notes:
 - **Car:** no on-campus drop-off/pick-up. Use Times Parking **TAKANAWA GATEWAY CITY P2** (expected); 30-minute free ticket from the school office. Do not park on the street.
 - **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
 - **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
-- **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
+- **Latest TIS Times as of 4 Oct 2026:** 1 Oct 2026 (Toddle). Previous: 24 Sep, 17 Sep, 10 Sep, 3 Sep. Portal now only points to Toddle.
 
 ## School hours (from Aug 25, 2026)
 
@@ -80,6 +80,24 @@ Notes:
 - Upper School students receive a school tote bag; no other bag permitted on campus.
 - Dress code: no uniform, but policy applies. See Community Handbook.
 - Lunch: bring nut-free food, or order via Kiwi Kitchen (create account, state grade + A/B for first order).
+
+## Confirmed placements and CCAs (2026-27)
+
+- Eldor 6B, Chrissy Erwin, room 112. Japanese Emergent 1 with Chika Mito. MS Boys Soccer Mon/Wed 15:30. Swim Wed 13:40–15:20, dismissed from the pool.
+- Malte 3B, Jared Barnes + Sarah, room 216. Basketball Thu 15:30 gym. PYP Choir (backing tracks for 8 Dec). Sound Waves 3B `spring952`. Epic 3B `agi1132`.
+- Vega-Lo KA, Claudia Ackermann + Laura, room 202. Tinker Lab Fri 15:30 room 220. Sound Waves KA `quit135`.
+
+## October 2026 facts
+
+- Kizuna yearbook photo orders due **Sun 4 Oct 2026**. January make-up session planned. Guide: https://drive.google.com/file/d/166SG3m9-N3d4aTbT8oy0Z_DRG-N2qA2D/view
+- G6–8 Explorations **12–15 Oct**, Mountain Park Tsunan. Final info Chris Brodie 2 Oct: https://drive.google.com/file/d/1hZUwZktYQX5iKSYfqcfHrV8J86KM0-3x/view. JUMP! assembly Mon 5 Oct. Fri 16 Oct starts 09:00. US staff CCAs cancelled 12–16 Oct.
+- G3 assembly **Thu 8 Oct 08:30–09:15** (3B hosts) plus classroom exhibition.
+- K4K Fluffy Day **Fri 9 Oct** (Day 1), ¥100.
+- Inter-school Trivia Night **Wed 7 Oct 19:30**, Hobgoblin Roppongi.
+- K–G2 Sports Day **Tue 13 Oct 13:15–15:00** on campus. G3–5 Sports Day **Fri 16 Oct 09:40–13:40** at YCAC (no parent bus/parking; train Yamate).
+- Lost and Found clear-out **Fri 16 Oct**. Term 2 invoices sent 1 Oct; funds by **Mon 2 Nov**. Withdrawal form by 31 Oct.
+- Fall break 19–23 Oct. G3 Toyosu Fish Market **26 Oct** (4 volunteers). TFC Halloween **30 Oct 17:15–19:15**.
+- Guest Wi-Fi until winter break: `81170-70630`. Parent ID tap 08:00–17:00.
 
 ## Recurring dedup rule
 

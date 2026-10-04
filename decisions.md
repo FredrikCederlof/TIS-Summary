@@ -2,6 +2,15 @@
 
 Log of choices made and why.
 
+## 2026-10-04 — Sunday briefing sent for 5–11 Oct
+
+Gmail MCP was registered. Searched 14 days including trash (tokyois.com, Toddle, SchoolsBuddy). Latest TIS Times is **1 Oct 2026**. Portal still only points to Toddle. Deduplicated per-child Toddle copies.
+
+Filled `email/weekly-briefing.html` for **5–11 Oct 2026** (Day 3–1). Hard deadline: Kizuna yearbook photos today. Restored `--to`/`--cc` and `User-Agent: TIS-Summary-resend/1.0` on `scripts/resend_briefing.py` (main had lost them again). Sent via Resend `01a10662-f502-71e9-8e64-735535a08dc2` to kotolynski@gmail.com, CC sternersofia@gmail.com.
+
+---
+
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.
