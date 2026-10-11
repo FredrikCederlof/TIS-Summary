@@ -7,7 +7,7 @@ Permanent knowledge. Update when new facts are confirmed. Never delete; mark out
 | Person | Role | Email |
 |---|---|---|
 | Fredrik Sterner Cederlöf | Parent (primary) | kotolynski@gmail.com |
-| Sofia Sterner Cederlöf | Parent (partner) | sofia.sterner@volvocars.com |
+| Sofia Sterner Cederlöf | Parent (partner) | sofia.sterner@volvocars.com · briefing CC: sternersofia@gmail.com |
 
 ## Children
 
@@ -31,7 +31,7 @@ Notes:
 - **Car:** no on-campus drop-off/pick-up. Use Times Parking **TAKANAWA GATEWAY CITY P2** (expected); 30-minute free ticket from the school office. Do not park on the street.
 - **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
 - **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
-- **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
+- **Latest TIS Times as of 11 Oct 2026:** 8 Oct 2026 (Toddle). Previous: 1 Oct, 24 Sep, 17 Sep, 10 Sep, 3 Sep. Portal landing page now points families to Toddle.
 
 ## School hours (from Aug 25, 2026)
 
@@ -80,6 +80,23 @@ Notes:
 - Upper School students receive a school tote bag; no other bag permitted on campus.
 - Dress code: no uniform, but policy applies. See Community Handbook.
 - Lunch: bring nut-free food, or order via Kiwi Kitchen (create account, state grade + A/B for first order).
+
+## Confirmed placements and CCAs (Toddle / SchoolsBuddy, Aug 2026)
+
+- Eldor 6B, Chrissy Erwin, room 112. Japanese Emergent 1 with Chika Mito. Swim Wed 13:40–15:20 (towels supplied; last-two-period swim dismisses from the pool). CCA: MS Boys Soccer Mon/Wed 15:30.
+- Malte 3B, Jared Barnes + Sarah, room 216. Sound Waves Firefly `spring952`. Epic 3B `agi1132` (08:00–15:00 weekdays). CCA: Basketball Thu 15:30, gym.
+- Vega-Lo KA, Claudia Ackermann + Laura, room 202. Sound Waves KA `quit135`. CCA: Tinker Lab Fri 15:30, room 220.
+
+## Autumn 2026 dates (confirmed this run)
+
+- G6–8 Explorations / JUMP: **Mon 12–Thu 15 Oct**, Mountain Park Tsunan. At TIS by 08:00 Mon; back ~17:00 Thu. Fri 16 Oct G6–8 start 09:00 (bus 08:00 still fine). Soft bag only.
+- K–G2 Sports Day: **Tue 13 Oct 13:15–15:00** on campus. Morning classes until 11:55. House-colour shirt. Rain cancels.
+- G3–5 Sports Day: **Fri 16 Oct 09:40–13:40** at YCAC (Yamate). House-colour shirt, packed snack/lunch, no parent bus or YCAC parking.
+- Fall Break: **19–23 Oct**. Back Mon 26 Oct.
+- G3 Toyosu Fish Market: **Mon 26 Oct**, leave 08:30–09:00. Extra layer for the tuna hall.
+- Kindergarten Asobono: **Wed 28 Oct**, leave 09:45, back 13:45 (14:30 if rain). Picnic lunch, no Kiwi Kitchen. Volunteer to martinede@tokyois.com by **Wed 14 Oct**.
+- LS Parent-Teacher Conferences: Thu 5 Nov (noon dismissal; 13:00–16:00 in person) and Fri 6 Nov (no classes; 08:00–12:00 in person, 13:00–16:00 Zoom). Sign-up SchoolsBuddy **26 Oct–3 Nov**.
+- Term 2 invoices: funds to arrive by **Mon 2 Nov** (31 Oct is Saturday).
 
 ## Recurring dedup rule
 
