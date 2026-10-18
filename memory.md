@@ -7,7 +7,7 @@ Permanent knowledge. Update when new facts are confirmed. Never delete; mark out
 | Person | Role | Email |
 |---|---|---|
 | Fredrik Sterner Cederlöf | Parent (primary) | kotolynski@gmail.com |
-| Sofia Sterner Cederlöf | Parent (partner) | sofia.sterner@volvocars.com |
+| Sofia Sterner Cederlöf | Parent (partner) | sofia.sterner@volvocars.com · sternersofia@gmail.com (briefing CC) |
 
 ## Children
 
@@ -18,9 +18,15 @@ Permanent knowledge. Update when new facts are confirmed. Never delete; mark out
 | Vega-Lo | Kindergarten | PYP (Lower School) | New student 2026/27 |
 
 Notes:
-- Eldor is EAL-monitored in G6 — no extra lessons, in-class support only (confirmed Tomomi Mizuno, Jun 2026).
-- Siblings will be placed in the same House.
+- Eldor is EAL-monitored in G6 — no extra lessons, in-class support only (confirmed Tomomi Mizuno, Jun 2026). Japanese **Emergent 1** with Chika Mito (confirmed Sep 2026).
+- Placements (Toddle 21 Aug 2026): Eldor **6B** Chrissy Erwin, room 112; Malte **3B** Jared Barnes + Sarah, room 216; Vega-Lo **KA** Claudia Ackermann + Laura, room 202.
+- CCA Season 1 (31 Aug–13 Nov 2026): Eldor MS Boys Soccer Mon/Wed 15:30 (Wed off campus); Malte Basketball Thu 15:30 Gym; Vega-Lo Tinker Lab Fri 15:30 room 220.
+- Eldor 6B swim Wed 13:40–15:20. Towels supplied. Last-two-period swim dismisses from the pool.
+- Siblings will be placed in the same House. House Teams sheet: https://docs.google.com/spreadsheets/d/1UsSbvpjofKz9EEDILPMJqLpC0psA0Pg6Ed89f3pn1rk/edit — colours not extracted (sheet needs login).
 - Bus requests for Eldor and Malte were removed from re-enrolment forms (March 2026, Sofia's note). Re-confirm if bus is needed.
+- Sound Waves: KA/older `quit135`; Malte 3B Firefly `spring952`. Epic 3B `agi1132`.
+- Guest Wi-Fi until winter break: `81170-70630` (Thomas Gay, 22 Sep). Parent ID cards tap 08:00–17:00.
+- Late buses: Late Bus (16:45) / BtB Bus (18:00/18:05). Doors: back 08:00 and 15:15–15:30; front for early CCA and after 16:30. After-CCA pickup is the main entrance.
 
 ## School
 
@@ -31,7 +37,7 @@ Notes:
 - **Car:** no on-campus drop-off/pick-up. Use Times Parking **TAKANAWA GATEWAY CITY P2** (expected); 30-minute free ticket from the school office. Do not park on the street.
 - **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
 - **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
-- **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
+- **Latest TIS Times as of 18 Oct 2026:** 15 Oct 2026 (Toddle). Parent portal landing page now says all information is in Toddle.
 
 ## School hours (from Aug 25, 2026)
 
@@ -80,6 +86,16 @@ Notes:
 - Upper School students receive a school tote bag; no other bag permitted on campus.
 - Dress code: no uniform, but policy applies. See Community Handbook.
 - Lunch: bring nut-free food, or order via Kiwi Kitchen (create account, state grade + A/B for first order).
+- **Fall Break 19–23 Oct 2026** (campus closed). School resumes Mon 26 Oct.
+- G3 Toyosu Market field trip **Mon 26 Oct**, leave 08:30–09:00; extra layer for 5–10°C warehouse; water bottle + jacket only; Kiwi Kitchen still on.
+- KG Asobono field trip **Wed 28 Oct**, leave 09:45, leave Asobono 13:45; picnic lunch (no Kiwi Kitchen); volunteer deadline was 14 Oct.
+- New Family Orientation **Wed 28 Oct 08:30–09:30**.
+- Curriculum presentations **Fri 30 Oct**: PYP/DP 08:30–09:30, MYP 09:30–10:30.
+- TFC Halloween Party **Fri 30 Oct 17:15–19:15** Gym 1F. RSVP by **Thu 22 Oct**. Payment by **Wed 28 Oct**. Adults ¥4,500, children ¥2,000. Form: https://docs.google.com/forms/d/e/1FAIpQLSe7rNemZSYP1nXxrN56TUgXw5houy6lYMj1b9qxkGsWOmzBuw/viewform
+- Lower School parent/guardian conferences **Thu 5 Nov** (noon dismissal; 13:00–16:00 in person) and **Fri 6 Nov** (no classes; 08:00–12:00 in person, 13:00–16:00 Zoom). Sign-up SchoolsBuddy **Mon 26 Oct–Tue 3 Nov**.
+- G3 Adapted Fairytales with families **Tue 3 Nov 13:35–14:20**. AGM same day (Japanese holiday).
+- PYP Choir Winter Concert **Tue 8 Dec**. Practice tracks: https://drive.google.com/drive/folders/11xytX58uY53haTIXZQsKEXAoUcpyPUdT
+- CCA Season 1 ends **Fri 13 Nov**. Season 2 sign-ups shortly after Fall Break.
 
 ## Recurring dedup rule
 
