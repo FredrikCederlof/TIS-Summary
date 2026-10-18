@@ -2,6 +2,16 @@
 
 Log of choices made and why.
 
+## 2026-10-18 — Fall Break briefing (19–25 Oct)
+
+Coming week is campus-closed Fall Break (Mon 19–Fri 23). Hard deadline in-week is TFC Halloween RSVP **Thu 22 Oct**. First day back **Mon 26 Oct** with Malte’s G3 Toyosu trip leaving 08:30–09:00. Vega-Lo Asobono Wed 28 Oct.
+
+Gmail MCP was registered this run (last 14 days, including trash). Parent portal HTTP check: landing page still says all information is in Toddle. Latest TIS Times: **15 Oct 2026**. New Family Orientation thread in trash could not be opened; times taken from TIS Times + OpenApply subject (28 Oct 08:30–09:30).
+
+`scripts/resend_briefing.py` on main had lost repeated `--to` / `--cc` and the Cloudflare `User-Agent` again. Restored before send. Always CC `sternersofia@gmail.com`.
+
+---
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.
