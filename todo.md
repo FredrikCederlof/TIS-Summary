@@ -4,15 +4,15 @@ Next steps. Move done items to decisions.md or delete them.
 
 ## Open
 
-- [ ] **Add Resend Cloud secret** — `RESEND_API_KEY` (Runtime Secret) at https://cursor.com/dashboard/cloud-agents then re-run Sunday. Optional `RESEND_FROM` after domain verify. This is the intended cloud send path.
 - [ ] **Add Gmail API Cloud secrets** (optional) — only if inbox search from cloud is needed. `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, `GMAIL_REFRESH_TOKEN`.
 - [ ] **Decide whether the email replaces `TIS-Summary-print.html`** — `email/weekly-briefing.html` now covers the same content and also prints cleanly. The old print sheet uses CSS Grid/Flexbox and is not email-safe. Delete it once confirmed.
-- [ ] **Confirm Eldor's and Malte's class placements** — Toddle opens Fri 21 Aug. Run `/tis-week` after that date to capture placements in the next canvas.
 - [ ] **Verify bus situation** — Bus requests were removed from re-enrolment (March 2026). Confirm if bus is still needed for any child.
-- [ ] **Kiwi Kitchen account** — Create account before Tue 25 Aug if using school lunch. Mention grade + A or B for first order.
-- [ ] **Update memory.md with House Team colours** — Assigned in first full week of school (week of 25 Aug). Add once known.
-- [ ] **Update memory.md with class teachers** — Available on Toddle from Fri 21 Aug.
-- [ ] **SchoolsBuddy CCA allocation result** — Check before Mon 31 Aug and note which activities each child was allocated.
+- [ ] **Update memory.md with House Team colours** — Sheet published 16 Sep; colours not extracted (needs login).
+- [ ] **Finish conference bookings** — sign-up closes Tue 3 Nov 21:00. Slots already booked for all three; add/cancel extra US teachers if needed.
+- [ ] **Rank Eldor Season 2 CCA** — SchoolsBuddy by Tue 3 Nov 15:00.
+- [ ] **Rank Malte and Vega-Lo Season 2 CCA** — opens Tue 3 Nov 15:00, closes Mon 9 Nov 15:00.
+- [ ] **Eldor Japanese homework** — due Tue 3 Nov (Chika / Toddle).
+- [ ] **G3 Amazon Chiba volunteers** — 3 Dec; email Jared/Sarah if a parent can go.
 
 ## Done
 
@@ -30,3 +30,11 @@ Next steps. Move done items to decisions.md or delete them.
 - [x] Sunday automation prompt now names the HTML template (20 Aug 2026) — send still blocked until Gmail MCP attaches in cloud
 - [x] Gmail API fallback scripts (`scripts/gmail_briefing.py`, `gmail_oauth_setup.py`) (20 Aug 2026)
 - [x] Resend send script (`scripts/resend_briefing.py`) as preferred cloud path (20 Aug 2026)
+- [x] Confirm Eldor's and Malte's class placements — Toddle 21 Aug: 6B / 3B / KA
+- [x] Update memory.md with class teachers — Chrissy Erwin; Jared Barnes + Sarah; Claudia Ackermann + Laura
+- [x] SchoolsBuddy CCA allocation result — soccer / basketball / Tinker Lab
+- [x] Kiwi Kitchen account — in use; skip Vega-Lo lunch Wed 28 Oct (Asobono picnic)
+- [x] Sunday 25 Oct 2026 briefing filled for 26 Oct–1 Nov and sent via Resend
+- [x] Book Lower School / November conferences — SchoolsBuddy confirmation 25 Oct for all three
+- [x] Pay TFC Halloween tickets / party Fri 30 Oct
+- [x] Sunday 1 Nov 2026 briefing filled for 2–8 Nov and sent via Resend (`01a19695-7fae-703b-a012-e970dccaf986`)
