@@ -2,6 +2,28 @@
 
 Log of choices made and why.
 
+## 2026-11-01 — Sunday briefing for 2–8 Nov sent via Resend
+
+Gmail MCP was registered. Searched last 14 days including trash. Key sources: TIS Times 29 Oct, G3 News 30 Oct, Season 2 CCA (Makoto 30 Oct), US conference clarification, SchoolsBuddy conference bookings 25 Oct, Chika Japanese homework due 3 Nov, KA Homeroom News 30 Oct. Portal still says all information is in Toddle. Public parent calendar confirmed AGM 3 Nov and conference days.
+
+Filled `email/weekly-briefing.html` for **2–8 Nov 2026** (conference week). Restored repeated `--to` / `--cc` and `User-Agent: TIS-Summary-resend/1.0` on `scripts/resend_briefing.py` before send (main had lost those flags again).
+
+**Decision:** send the filled HTML via Resend to kotolynski@gmail.com, CC sternersofia@gmail.com. Do not send a markdown recap.
+
+**Send id:** `01a19695-7fae-703b-a012-e970dccaf986` (1 Nov 2026).
+
+---
+
+## 2026-10-25 — Sunday briefing for 26 Oct–1 Nov sent via Resend
+
+Gmail MCP was registered. Searched last 14 days including trash (tokyois.com empty; OpenApply, Toddle, and a broad TIS query had mail). Deduplicated TIS Times and TAC copies. Parent portal still says all information is in Toddle. Public parent calendar confirmed events around 27–31 Oct.
+
+Filled `email/weekly-briefing.html` for **26 Oct–1 Nov 2026** (first week back after Fall Break). Restored repeated `--to` / `--cc` and `User-Agent: TIS-Summary-resend/1.0` on `scripts/resend_briefing.py` before send.
+
+**Decision:** send the filled HTML via Resend to kotolynski@gmail.com, CC sternersofia@gmail.com. Do not send a markdown recap.
+
+---
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.
