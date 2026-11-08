@@ -2,6 +2,16 @@
 
 Log of choices made and why.
 
+## 2026-11-08 — Sunday send: Gmail search + Resend CC restored again
+
+Cloud Sunday run for **9–15 Nov 2026**. Gmail MCP was registered; searched last 14 days including trash. Parent portal still closed (all information in Toddle). Latest TIS Times 5 Nov 2026.
+
+`scripts/resend_briefing.py` on `main` had again lost repeatable `--to` / `--cc` and the `User-Agent: TIS-Summary-resend/1.0` header. Restored from the 1 Nov branch before send, same as 13 Sep through 1 Nov.
+
+**Decision:** keep restoring those flags on each Sunday run until the PRs merge to `main`. Send HTML via Resend to kotolynski@gmail.com, CC sternersofia@gmail.com.
+
+---
+
 ## 2026-08-20 — Cloud Sunday run did not send (Gmail MCP missing)
 
 The replacement Sunday automation (`TIS Sunday parent briefing`, cron `0 10 * * 0`) cloned `insight-works/TIS-Summary` with `email/weekly-briefing.html` already filled for **24–30 Aug 2026**. The Gmail plugin artifact was present, but Cursor did not register an MCP server named `gmail`. Portal login (skip honeypot) and public key dates confirmed Opening Ceremony 24 Aug and first school day 25 Aug. Latest TIS Times on the portal was still 17 Jun 2026.
