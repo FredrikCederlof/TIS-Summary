@@ -19,8 +19,14 @@ Permanent knowledge. Update when new facts are confirmed. Never delete; mark out
 
 Notes:
 - Eldor is EAL-monitored in G6 — no extra lessons, in-class support only (confirmed Tomomi Mizuno, Jun 2026).
+- Placements: Eldor 6B Chrissy Erwin room 112; Malte 3B Jared Barnes + Sarah room 216; Vega-Lo KA Claudia Ackermann + Laura room 202.
+- CCA Season 1 ended Fri 13 Nov 2026. Eldor MS Boys Soccer finished Sat 7 Nov (5–0 NIS, 1–3 KIST). Malte Basketball Thu 15:30. Vega-Lo Tinker Lab Fri 15:30 room 220 (Karen Robiso; season ended).
+- CCA Season 2 (16 Nov 2026–19 Feb 2027): Eldor KPASS MS Boys Basketball Tue 07:00–08:00 and Wed 15:30–16:30 gym (Makoto confirmed 10 Nov; SchoolsBuddy corrected). Malte G3–5 Sewing Wed 15:30–16:30 Lundin. Vega-Lo Kids-4-Kids Fri 15:30–16:30 room 218 Mizuno. Eldor Tuesday 07:00 clashes with Monday ice hockey — activity-change request to Makoto still unanswered.
+- Vega-Lo selected for TIS brand video (Stephen Richards, 13 Nov). Filming 8–10 Dec; parent consent + drop-off parent due Mon 16 Nov. Mystery Bag presented; Claudia thanked Fredrik 10 Nov.
 - Siblings will be placed in the same House.
 - Bus requests for Eldor and Malte were removed from re-enrolment forms (March 2026, Sofia's note). Re-confirm if bus is needed.
+- G3 Amazon Fulfillment Centre trip is Wed 2 Dec 09:30–11:30 (parent calendar; newsletter first said 3 Dec). Volunteers already thanked in G3 News 13 Nov.
+- Sofia proposed Tue 17 Nov 12:00–12:50 with Scott d’Aquin for Eldor math follow-up (not yet confirmed). English novel (Chrissy) due Mon 23 Nov.
 
 ## School
 
@@ -31,7 +37,8 @@ Notes:
 - **Car:** no on-campus drop-off/pick-up. Use Times Parking **TAKANAWA GATEWAY CITY P2** (expected); 30-minute free ticket from the school office. Do not park on the street.
 - **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
 - **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
-- **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
+- **Latest TIS Times as of 15 Nov 2026:** 12 Nov 2026 on Toddle (portal still closed; all information is in Toddle). Previous: 5 Nov, 29 Oct, 15 Oct, 8 Oct, 1 Oct, 24 Sep, 17 Sep, 10 Sep, 3 Sep.
+- **Drop-off (TIS Times 12 Nov):** residence asked families to drop off and leave — do not park and walk a child into school.
 
 ## School hours (from Aug 25, 2026)
 
