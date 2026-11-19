@@ -32,6 +32,7 @@ Notes:
 - **Opening Ceremony (Mon 24 Aug 2026):** doors 08:30, ceremony 09:00–10:00 in the gym (standing room). Lower School parents must accompany their child; Upper School students may attend alone. Scan the invitation QR and bring the confirmation. Campus explore 10:00–12:00.
 - **Wearables:** phones, smartwatches, and wireless wearables off-and-away 08:00–15:20 (lockers/backpacks). Analog/basic digital watches OK.
 - **Latest TIS Times as of 20 Aug 2026:** 17 Jun 2026 (no August issue on the portal yet).
+- **Latest TIS Times as of 19 Nov 2026:** 19 Nov 2026 (Toddle). Parent portal still redirects class communication to Toddle.
 
 ## School hours (from Aug 25, 2026)
 
@@ -80,6 +81,11 @@ Notes:
 - Upper School students receive a school tote bag; no other bag permitted on campus.
 - Dress code: no uniform, but policy applies. See Community Handbook.
 - Lunch: bring nut-free food, or order via Kiwi Kitchen (create account, state grade + A/B for first order).
+- **TFC Pizza Days (paid 18 Nov 2026, ¥6,240):** Eldor 4 / Malte 2 / Vega-Lo 2 slices on each of Dec, Mar, Jun. TIS Times 19 Nov moved the first pizza day from Wed 9 Dec to **Tue 8 Dec**. Confirm with TFC that the paid December order moves with the date.
+- **Eldor MS Boys Basketball, from 19 Nov 2026:** C team — Mon 15:30–16:30 and Thu 07:00–08:00. No C-team games scheduled yet. A/B teams keep Tue 07:00 / Wed 15:30. Groups reviewed regularly.
+- **Vega-Lo TIS brand video:** consent given 15 Nov. Fredrik drop-off 9 or 10 Dec. Vega-Lo may also be filmed during the 8 Dec concert. Everyday clothes.
+- **Malte PYP Choir:** Winter Concert Tue 8 Dec 08:30–09:15. Mandatory after-school rehearsal Tue 15 Dec 15:30–16:30.
+- **Lost and found (TIS Times 19 Nov):** lunch boxes and food containers that begin to smell will be thrown away; other items still clear monthly.
 
 ## Recurring dedup rule
 
